@@ -1,0 +1,16 @@
+node_modules/
+.next/
+.env.local
+.env
+*.log
+/dist/
+
+# Editor / IDE
+.vscode/
+.mcp.json
+.markdown-collab/
+*.zip
+*.MOV
+*.mp4
+*.ods
+Contenido Tecno light*/

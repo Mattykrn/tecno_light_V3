@@ -1,0 +1,59 @@
+{
+  "name": "tecnolight-backend",
+  "version": "1.0.0",
+  "description": "Backend API para sitio web institucional de Tecnolight",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js",
+    "migrate": "prisma migrate deploy",
+    "seed": "node database/seeds/seed.js",
+    "test": "jest --detectOpenHandles --forceExit"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "testMatch": [
+      "**/tests/backend/**/*.test.js",
+      "**/__tests__/**/*.test.js"
+    ],
+    "roots": [
+      "../tests/backend",
+      "."
+    ],
+    "modulePaths": [
+      "<rootDir>/node_modules"
+    ],
+    "testTimeout": 30000
+  },
+  "dependencies": {
+    "@prisma/client": "^5.7.1",
+    "bcrypt": "^5.1.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "express-rate-limit": "^7.1.5",
+    "express-validator": "^7.0.1",
+    "helmet": "^7.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "multer": "^2.2.0",
+    "node-cron": "^4.5.0",
+    "nodemailer": "^6.9.7",
+    "otplib": "^13.4.1",
+    "pdfkit": "^0.19.1",
+    "qrcode": "^1.5.4"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "nodemon": "^3.0.2",
+    "prisma": "^5.7.1",
+    "supertest": "^6.3.3"
+  },
+  "keywords": [
+    "tecnolight",
+    "señalización-vial",
+    "cartelería",
+    "api-rest"
+  ],
+  "author": "Tecnolight",
+  "license": "MIT"
+}

@@ -1,0 +1,62 @@
+export const obrasData = [
+  {
+    id: "fab-carteles-corrugados-01",
+    src: "/images/media/fab-carteles-corrugados-01.jpg",
+    title: "Cartelería Transitoria de Obra",
+  },
+  {
+    id: "fab-circulos-velocidad",
+    src: "/images/media/fab-circulos-velocidad.jpg",
+    title: "Discos Reflectivos de Velocidad",
+  },
+  {
+    id: "fab-cartel-radar-dpv",
+    src: "/images/media/fab-cartel-radar-dpv.jpg",
+    title: "Cartelería Informativa Urbana",
+  },
+  {
+    id: "svc-senalizacion-obra-01",
+    src: "/images/media/svc-senalizacion-obra-01.jpg",
+    title: "Señalización de Obra Urbana",
+  },
+  {
+    id: "svc-senales-rp70-01",
+    src: "/images/media/svc-senales-rp70-01.jpg",
+    title: "Señalización Preventiva en Ruta",
+  },
+  {
+    id: "svc-senales-campo-01",
+    src: "/images/media/svc-senales-campo-01.jpg",
+    title: "Cartelería Reglamentaria Rural",
+  },
+  {
+    id: 'reg-R15-velocidad',
+    src: '/images/catalogo/reglamentaria-velocidad.jpg',
+    title: 'Señalización Reglamentaria de Velocidad',
+  },
+  {
+    id: 'inf-I1-destino-ruta',
+    src: '/images/catalogo/informativa-panel.jpg',
+    title: 'Cartelería Informativa en Ruta',
+  },
+  {
+    id: 'inf-velocidades-carril',
+    src: '/images/catalogo/preventiva-curva.jpg',
+    title: 'Cartel Informativo de Velocidades',
+  },
+  {
+    id: 'trans-T1-obra',
+    src: '/images/catalogo/transitoria-obra.jpg',
+    title: 'Cartelería Transitoria',
+  },
+  {
+    id: 'trans-T-desnivel',
+    src: '/images/catalogo/transitoria-desnivel.jpg',
+    title: 'Peligro Desnivel Transitorio',
+  },
+  {
+    id: 'trans-nocturno-balizas',
+    src: '/images/catalogo/transitoria-balizas.jpg',
+    title: 'Señalización Nocturna',
+  }
+];
