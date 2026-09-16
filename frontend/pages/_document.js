@@ -40,11 +40,12 @@ export default function Document() {
           content="Más de 30 años de trayectoria en señalización vial y cartelería de alta calidad."
         />
 
-        {/* Favicon */}
+        {/* Favicon & PWA */}
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
         <link rel="icon" href="/favicon.ico" sizes="any" />
-        <link rel="apple-touch-icon" href="/favicon.svg" />
-        <link rel="manifest" href="/site.webmanifest" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        <link rel="manifest" href="/manifest.json" />
+        <meta name="theme-color" content="#0B111E" />
 
         {/* Google Fonts – Raleway + Roboto */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />

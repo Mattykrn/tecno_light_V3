@@ -15,8 +15,13 @@ const WaIcon = ({ size = 16 }) => (
   </svg>
 );
 
-
-
+const IgIcon = ({ size = 16 }) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+  </svg>
+);
 const NAV = [
   { label: 'Inicio', href: '/' },
   { label: 'Quiénes Somos', href: '/#nosotros' },
@@ -53,6 +58,7 @@ export default function Layout({ children }) {
         className="fixed bottom-6 right-5 z-50 flex items-center gap-2.5 bg-[#25D366] text-white font-bold text-sm px-5 py-3.5 rounded-full shadow-2xl hover:bg-[#1db954] transition-all hover:scale-105 active:scale-95"
         style={{ boxShadow: '0 6px 28px rgba(37,211,102,0.4), 0 2px 8px rgba(0,0,0,0.4)' }}
       >
+        <WaIcon size={22} />
         <span className="hidden sm:inline">WhatsApp</span>
       </a>
 
@@ -133,7 +139,7 @@ export default function Layout({ children }) {
                   className="inline-flex items-center gap-2 bg-[#25D366]/12 border border-[#25D366]/20 text-[#25D366] text-xs font-semibold px-4 py-2.5 rounded-[4px] hover:bg-[#25D366]/20 transition-colors"
                   style={{ fontFamily: "'Roboto', sans-serif" }}
                 >
-                  Contactar por WhatsApp
+                  <WaIcon size={16} /> Contactar por WhatsApp
                 </a>
                 <a
                   href="https://www.instagram.com/tecnolight.srl/"
@@ -142,7 +148,7 @@ export default function Layout({ children }) {
                   className="inline-flex items-center gap-2 bg-[#E1306C]/12 border border-[#E1306C]/20 text-[#E1306C] text-xs font-semibold px-4 py-2.5 rounded-[4px] hover:bg-[#E1306C]/20 transition-colors"
                   style={{ fontFamily: "'Roboto', sans-serif" }}
                 >
-                  Seguinos en Instagram
+                  <IgIcon size={16} /> Seguinos en Instagram
                 </a>
               </div>
               
@@ -167,6 +173,7 @@ export default function Layout({ children }) {
                 </span>
               </div>
               <a href={WA_LINK} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-[#25D366] hover:text-white transition-colors font-bold">
+                <WaIcon size={18} />
                 <span className="text-sm">WhatsApp de contacto y cotizaciones</span>
               </a>
               <a href="mailto:tecnolight@tecnolightsrl.com?subject=Solicitud%20de%20Cotizaci%C3%B3n" className="flex items-center gap-3 text-white/70 hover:text-primary transition-colors">
