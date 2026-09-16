@@ -93,5 +93,15 @@ export const obrasData = [
     id: "sf-portico-3",
     src: "/images/instaladas/img_20250925_104539925.jpg",
     title: "Señalización Preventiva Santa Fe",
+  },
+  {
+    id: "sf-gigante-1",
+    src: "/images/projects/santa-fe-gigante-1.jpg",
+    title: "Cartel de Obra Gran Porte Santa Fe (Líneas Eléctricas)",
+  },
+  {
+    id: "sf-gigante-2",
+    src: "/images/projects/santa-fe-gigante-2.jpg",
+    title: "Cartel de Obra Monumental Santa Fe (Ruta Prov. 13)",
   }
 ];
