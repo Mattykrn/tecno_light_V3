@@ -81,17 +81,17 @@ export const obrasData = [
   },
   {
     id: "sf-portico-1",
-    src: "/images/projects/santa-fe-1.jpg",
-    title: "Pórtico Vial Santa Fe",
+    src: "/images/instaladas/img_20250925_104255713_hdr_ae.jpg",
+    title: "Señalización Informativa Santa Fe",
   },
   {
     id: "sf-portico-2",
-    src: "/images/projects/santa-fe-2.jpg",
-    title: "Señalización Aérea Provincia",
+    src: "/images/instaladas/img_20250925_105759122.jpg",
+    title: "Señalización Parada de Omnibus Santa Fe",
   },
   {
     id: "sf-portico-3",
-    src: "/images/projects/santa-fe-3.jpg",
-    title: "Cartelería Gran Porte Santa Fe",
+    src: "/images/instaladas/img_20250925_104539925.jpg",
+    title: "Señalización Preventiva Santa Fe",
   }
 ];
