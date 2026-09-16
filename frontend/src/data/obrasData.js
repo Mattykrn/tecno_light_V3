@@ -7,17 +7,12 @@ export const obrasData = [
   {
     id: "fab-circulos-velocidad",
     src: "/images/media/fab-circulos-velocidad.jpg",
-    title: "Discos Reflectivos de Velocidad",
+    title: "Discos de Velocidad Homologados",
   },
   {
     id: "fab-cartel-radar-dpv",
     src: "/images/media/fab-cartel-radar-dpv.jpg",
-    title: "Cartelería Informativa Urbana",
-  },
-  {
-    id: "svc-senalizacion-obra-01",
-    src: "/images/media/svc-senalizacion-obra-01.jpg",
-    title: "Señalización de Obra Urbana",
+    title: "Señalización Urbana para Municipios",
   },
   {
     id: "svc-senales-rp70-01",

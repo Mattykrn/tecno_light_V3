@@ -137,15 +137,23 @@ export default function Layout({ children }) {
                 Señalización & Protección Personal. Referentes en seguridad vial, demarcación horizontal y seguridad industrial. Lunes a Viernes de 8:00 a 17:00 hs.
               </p>
               
-              <div className="flex flex-col items-start gap-2 mb-8">
+              <div className="flex flex-col items-start gap-2.5 mb-8">
                 <span className="text-[11px] uppercase tracking-wider text-slate-400 font-semibold">
-                  Aval oficial:
+                  Aval oficial y convertidor certificado:
                 </span>
-                <img 
-                  src="/images/avery-trafficjet-white.svg" 
-                  alt="Avery Dennison TrafficJet Xpress" 
-                  className="h-8 w-auto object-contain brightness-0 invert opacity-90 hover:opacity-100 transition-opacity"
-                />
+                <div className="bg-white/95 rounded-lg px-3.5 py-2 flex items-center gap-3.5 shadow-md border border-white/20">
+                  <img 
+                    src="/images/avery-dennison-official.svg" 
+                    alt="Avery Dennison" 
+                    className="h-6 w-auto object-contain"
+                  />
+                  <div className="h-5 w-px bg-slate-200" />
+                  <img 
+                    src="/images/trafficjet-xpress-official.svg" 
+                    alt="TrafficJet™ Xpress" 
+                    className="h-5 w-auto object-contain"
+                  />
+                </div>
               </div>
 
               {/* Redes Sociales - Sin redundancia */}

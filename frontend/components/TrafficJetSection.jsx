@@ -18,11 +18,14 @@ export default function TrafficJetSection() {
   ];
 
   return (
-    <section id="tecnologia" className="bg-slate-900 border-y border-slate-800 py-16 px-4">
+    <section id="tecnologia" className="bg-slate-900 border-y border-slate-800 py-16 lg:py-24 px-4 relative">
+      {/* Anchor complementario para navegación */}
+      <div id="planta-tecnologia" className="absolute -top-20" />
+
       <div className="max-w-7xl mx-auto">
         
         {/* Header de la Sección */}
-        <div className="text-center max-w-3xl mx-auto mb-16 space-y-6">
+        <div className="text-center max-w-3xl mx-auto mb-14 space-y-4">
           <span className="inline-block px-3 py-1 rounded-full bg-orange-500/10 text-orange-400 border border-orange-500/20 text-xs font-bold tracking-wider uppercase" style={MONO}>
             Equipamiento Industrial Homologado
           </span>
@@ -35,71 +38,118 @@ export default function TrafficJetSection() {
         </div>
 
         {/* Layout en 2 Columnas */}
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center mb-16">
+        <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 items-center mb-16">
           
-          {/* Columna Izquierda (Showcase Audiovisual) */}
-          <div className="relative group">
-            <div className="absolute -top-3 -right-3 z-20">
-              <span className="px-3 py-1 rounded-full bg-emerald-500/90 text-emerald-50 border border-emerald-400/50 text-xs font-bold tracking-wider uppercase shadow-lg shadow-emerald-500/20 backdrop-blur-md">Laminado Anti-Graffiti Disponible</span>
-            </div>
-            <div className="rounded-2xl overflow-hidden border border-slate-700 bg-black shadow-2xl relative aspect-video">
+          {/* Columna Izquierda: Showcase Audiovisual (5 cols) */}
+          <div className="lg:col-span-6 flex flex-col">
+            <div className="relative group rounded-2xl overflow-hidden border border-slate-700/80 bg-black shadow-2xl aspect-video">
+              <div className="absolute top-3 right-3 z-20">
+                <span className="px-3 py-1 rounded-full bg-emerald-500/90 text-white border border-emerald-400/50 text-[11px] font-bold tracking-wider uppercase shadow-lg shadow-emerald-500/20 backdrop-blur-md">
+                  Laminado Anti-Graffiti
+                </span>
+              </div>
+              <div className="absolute top-3 left-3 z-20 flex items-center gap-2 bg-black/60 backdrop-blur-md px-3 py-1 rounded-full border border-white/15">
+                <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+                <span className="text-[10px] font-bold text-white tracking-wider uppercase" style={MONO}>
+                  Planta Activa
+                </span>
+              </div>
+
               <video 
                 autoPlay 
                 loop 
                 muted 
                 playsInline 
+                preload="metadata"
                 className="w-full h-full object-cover"
                 poster="/images/trafficjet/proceso-impresion-poster.jpg"
               >
+                <source src="/videos/trafficjet-impresion.mp4" type="video/mp4" />
                 <source src="/videos/trafficjet/impresion-trafficjet.mp4" type="video/mp4" />
               </video>
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent pointer-events-none" />
             </div>
-            <div className="absolute -bottom-4 inset-x-6 bg-slate-800/90 backdrop-blur-sm border border-slate-700 px-4 py-3 rounded-lg shadow-lg text-center">
+
+            <div className="mt-3 bg-slate-800/80 backdrop-blur-sm border border-slate-700/70 px-4 py-3 rounded-xl shadow-lg text-center">
               <p className="text-xs text-slate-300 font-medium" style={MONO}>
-                Registro directo en planta — Proceso continuo de impresión digital sobre lámina reflectiva.
+                Registro directo en planta — Proceso continuo de impresión digital sobre lámina reflectiva microprismática.
               </p>
             </div>
           </div>
 
-          {/* Columna Derecha (4 Pilares en 2x2) */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 mt-8 lg:mt-0">
-            {[
-              {
-                icon: <ShieldCheck className="text-orange-400" size={22} />,
-                title: "Láminas Retrorreflectivas Certificadas",
-                desc: "Grado Ingeniería, Alta Intensidad Prismática (HIP) y Grado Diamante (DNV / DPV)."
-              },
-              {
-                icon: <Droplet className="text-orange-400" size={22} />,
-                title: "Tintas Eco-solventes Homologadas",
-                desc: "Curado UV de alta penetración, estabilidad de color y uniformidad cromática reglamentaria."
-              },
-              {
-                icon: <Sparkles className="text-emerald-400" size={22} />,
-                title: "Protección Integral Anti-Graffiti",
-                desc: "Blindaje repelente a pinturas sintéticas y aerosoles. Permite limpieza reiterada sin degradar la señal."
-              },
-              {
-                icon: <Clock className="text-orange-400" size={22} />,
-                title: "Garantía Extendida de Fábrica",
-                desc: "Durabilidad a la intemperie certificada por Avery Dennison de hasta 10 a 12 años en condiciones extremas."
-              }
-            ].map((pillar, idx) => (
-              <div key={idx} className="flex flex-col gap-3 group bg-slate-800/40 p-5 rounded-2xl border border-slate-700/50 hover:border-orange-500/30 hover:bg-slate-800/80 transition-all">
-                <div className="w-10 h-10 rounded-lg bg-slate-800 border border-slate-700 flex items-center justify-center shrink-0">
-                  {pillar.icon}
+          {/* Columna Derecha: Tarjeta de Aval Oficial & 4 Pilares (6 cols) */}
+          <div className="lg:col-span-6 flex flex-col">
+            
+            {/* Card Institucional con Logos Oficiales sin filtros de color */}
+            <div className="bg-white rounded-2xl p-6 shadow-2xl border border-white/20 mb-6">
+              <div className="flex flex-wrap items-center justify-between gap-4 pb-4 border-b border-slate-100">
+                <div className="flex items-center gap-4">
+                  <img 
+                    src="/images/avery-dennison-official.svg" 
+                    alt="Avery Dennison" 
+                    className="h-8 md:h-9 w-auto object-contain"
+                  />
+                  <div className="h-6 w-px bg-slate-200" />
+                  <img 
+                    src="/images/trafficjet-xpress-official.svg" 
+                    alt="TrafficJet™ Xpress" 
+                    className="h-6 md:h-7 w-auto object-contain"
+                  />
                 </div>
-                <div>
-                  <h3 className="text-white font-bold text-sm mb-2 tracking-wide" style={MONO}>
-                    {pillar.title}
-                  </h3>
-                  <p className="text-slate-400 text-xs leading-relaxed" style={BODY}>
+                <span className="inline-flex items-center gap-1.5 text-xs font-bold text-emerald-700 bg-emerald-50 px-3 py-1.5 rounded-full border border-emerald-200 uppercase tracking-wider" style={MONO}>
+                  <ShieldCheck size={14} className="text-emerald-600" /> Convertidor Oficial
+                </span>
+              </div>
+              <div className="pt-4">
+                <p className="text-xs font-bold text-slate-700 uppercase tracking-wider mb-1" style={MONO}>
+                  Garantía de Retrorreflectividad Homologada (DNV / IRAM 3952)
+                </p>
+                <p className="text-slate-600 text-xs md:text-sm font-medium leading-relaxed" style={BODY}>
+                  Impresión digital directa sobre láminas microprismáticas Grado Ingeniería y Grado Diamante con tintas eco-solventes homologadas y curado UV. Durabilidad exterior certificada por Avery Dennison de 10 a 12 años.
+                </p>
+              </div>
+            </div>
+
+            {/* 4 Pilares Técnicos */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+              {[
+                {
+                  icon: <ShieldCheck className="text-orange-400" size={20} />,
+                  title: "Láminas Retrorreflectivas Certificadas",
+                  desc: "Grado Ingeniería, Alta Intensidad Prismática (HIP) y Grado Diamante (DNV / DPV)."
+                },
+                {
+                  icon: <Droplet className="text-orange-400" size={20} />,
+                  title: "Tintas Eco-solventes Homologadas",
+                  desc: "Curado UV de alta penetración, estabilidad de color y uniformidad cromática reglamentaria."
+                },
+                {
+                  icon: <Sparkles className="text-emerald-400" size={20} />,
+                  title: "Protección Integral Anti-Graffiti",
+                  desc: "Blindaje repelente a pinturas sintéticas y aerosoles. Permite limpieza sin degradación."
+                },
+                {
+                  icon: <Clock className="text-orange-400" size={20} />,
+                  title: "Garantía Extendida de Fábrica",
+                  desc: "Durabilidad a la intemperie de hasta 10 a 12 años certificada por Avery Dennison."
+                }
+              ].map((pillar, idx) => (
+                <div key={idx} className="flex flex-col gap-2 bg-slate-800/50 p-4 rounded-xl border border-slate-700/60 hover:border-orange-500/40 hover:bg-slate-800/80 transition-all">
+                  <div className="flex items-center gap-2.5">
+                    <div className="w-8 h-8 rounded-lg bg-slate-800 border border-slate-700 flex items-center justify-center shrink-0">
+                      {pillar.icon}
+                    </div>
+                    <h3 className="text-white font-bold text-xs tracking-wide" style={MONO}>
+                      {pillar.title}
+                    </h3>
+                  </div>
+                  <p className="text-slate-300 text-xs leading-relaxed" style={BODY}>
                     {pillar.desc}
                   </p>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
+
           </div>
         </div>
 

@@ -12,6 +12,11 @@ node_modules/
 *.zip
 *.MOV
 *.mp4
+!frontend/public/videos/trafficjet-impresion.mp4
+!frontend/public/videos/trafficjet/impresion-trafficjet.mp4
+!frontend/public/videos/cartel-fabricacion.mp4
+!frontend/public/videos/senales-instalacion.mp4
+!frontend/public/videos/reel-produccion.mp4
 *.ods
 Contenido Tecno light*/
 .vercel

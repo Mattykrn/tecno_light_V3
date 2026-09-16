@@ -62,30 +62,23 @@ export default function InteractiveRoadHero() {
         </div>
 
         {/* Aval Avery Dennison Inferior */}
-        <div className="pt-8 mt-10 border-t border-white/10 flex flex-col sm:flex-row items-center justify-center gap-6 w-full max-w-4xl mx-auto px-4">
-          <span className="text-sm sm:text-base uppercase tracking-widest text-slate-300 font-bold text-center sm:text-left">
+        <div className="pt-8 mt-10 border-t border-white/10 flex flex-col sm:flex-row items-center justify-center gap-5 w-full max-w-4xl mx-auto px-4">
+          <span className="text-xs sm:text-sm uppercase tracking-widest text-slate-300 font-bold text-center sm:text-left">
             Distribuidores y convertidores certificados:
           </span>
 
-          <div className="flex items-center gap-4 bg-white/5 border border-white/15 px-6 py-4 rounded-2xl shadow-inner">
-            {/* Isotipo Avery Dennison en SVG puro con tamaño real */}
-            <svg 
-              viewBox="0 0 100 90" 
-              className="h-12 w-auto fill-white shrink-0" 
-              aria-label="Avery Dennison"
-            >
-              <path d="M47.2 4.5c1.2-2 3.8-2.7 5.8-1.5.5.3.9.7 1.2 1.2l44.3 75.2c1.2 2 .5 4.6-1.5 5.8-.6.4-1.3.6-2 .6H5c-2.3 0-4.2-1.9-4.2-4.2 0-.7.2-1.5.6-2.1L47.2 4.5zm2.8 15.8L16.4 75.8h67.2L50 20.3zm0 21.2l18.5 31.3H31.5L50 41.5z" />
-            </svg>
-
-            {/* Textos tipográficos nítidos y legibles sin depender de imágenes comprimidas */}
-            <div className="flex flex-col text-left leading-none justify-center">
-              <span className="text-white font-black text-xl sm:text-2xl tracking-tighter uppercase font-sans">
-                AVERY DENNISON
-              </span>
-              <span className="text-orange-400 font-bold text-sm sm:text-base tracking-wide mt-1">
-                TrafficJet™ Xpress
-              </span>
-            </div>
+          <div className="flex items-center gap-4 bg-white/95 border border-white/30 px-5 py-2.5 rounded-xl shadow-xl hover:bg-white transition-all">
+            <img 
+              src="/images/avery-dennison-official.svg" 
+              alt="Avery Dennison" 
+              className="h-7 sm:h-8 w-auto object-contain" 
+            />
+            <div className="h-6 w-px bg-slate-200" />
+            <img 
+              src="/images/trafficjet-xpress-official.svg" 
+              alt="TrafficJet™ Xpress" 
+              className="h-6 sm:h-7 w-auto object-contain" 
+            />
           </div>
         </div>
       </motion.div>
