@@ -78,5 +78,20 @@ export const obrasData = [
     id: "inst-demarcacion-01",
     src: "/images/instaladas/img_20250925_112732180.jpg",
     title: "Montaje y Vallado en Obra",
+  },
+  {
+    id: "sf-portico-1",
+    src: "/images/projects/santa-fe-1.jpg",
+    title: "Pórtico Vial Santa Fe",
+  },
+  {
+    id: "sf-portico-2",
+    src: "/images/projects/santa-fe-2.jpg",
+    title: "Señalización Aérea Provincia",
+  },
+  {
+    id: "sf-portico-3",
+    src: "/images/projects/santa-fe-3.jpg",
+    title: "Cartelería Gran Porte Santa Fe",
   }
 ];
