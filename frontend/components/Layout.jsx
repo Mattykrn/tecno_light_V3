@@ -22,13 +22,14 @@ const IgIcon = ({ size = 16 }) => (
     <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
   </svg>
 );
-const NAV = [
-  { label: 'Inicio', href: '/' },
+const MENU_LINKS = [
+  { label: 'Inicio', href: '/#inicio' },
+  { label: 'Fabricación & Catálogo', href: '/#catalogo' },
+  { label: 'Servicios Viales & Balizamiento', href: '/#servicios' },
+  { label: 'Seguridad Industrial y EPP', href: '/#seguridad' },
+  { label: 'Planta Industrial & Tecnología', href: '/#planta' },
   { label: 'Quiénes Somos', href: '/#nosotros' },
-  { label: 'Planta Industrial', href: '/#fabricacion' },
-  { label: 'Obras Instaladas', href: '/#servicios' },
-  { label: 'Seguridad Industrial', href: '/#seguridad-industrial' },
-  { label: 'Contacto', href: '/#contacto' },
+  { label: 'Sedes & Contacto', href: '/#contacto' },
 ];
 
 export default function Layout({ children }) {
@@ -64,57 +65,59 @@ export default function Layout({ children }) {
 
       <header className="fixed inset-x-0 top-0 z-50 bg-slate-900 border-b border-slate-800 shadow-md">
         <div className="max-w-7xl mx-auto px-6 flex items-center justify-between h-16 lg:h-20">
-          <Link href="/" className="flex items-center gap-3 group transition-transform hover:scale-[1.02]">
-            <Image src="/images/logo-tecnolight.png" alt="Tecno Light S.R.L." width={160} height={48} priority style={{ width: 'auto', height: '44px' }} />
+          <Link href="/#inicio" className="flex items-center gap-3 group transition-transform hover:scale-[1.02]">
+            <Image src="/images/logo-tecnolight.png" alt="Tecno Light S.R.L." width={160} height={48} style={{ width: 'auto', height: '44px' }} />
             <div className="flex flex-col">
               <span className="text-lg font-bold text-white leading-none tracking-tight" style={{ fontFamily: "'Raleway', sans-serif" }}>TECNO LIGHT S.R.L.</span>
               <span className="text-[10px] font-medium text-slate-400 tracking-wider uppercase mt-1">Señalización Vial e Industrial</span>
             </div>
           </Link>
 
-          <nav className="hidden lg:flex items-center gap-7">
-            {NAV.map(l => (
-              <Link
-                key={l.href}
-                href={l.href}
-                className={`text-[13px] font-medium transition-colors tracking-wide ${router.pathname === l.href || (l.href === '/' && router.pathname === '/') ? 'text-orange-500' : 'text-slate-300 hover:text-orange-500'}`}
-                style={{ fontFamily: "'Roboto', sans-serif" }}
-              >
-                {l.label}
-              </Link>
-            ))}
-          </nav>
-
-
-
-          <button onClick={() => setMenuOpen(!menuOpen)} className="lg:hidden text-slate-300 hover:text-white p-1.5" aria-label="Menú">
-            {menuOpen ? <X size={24} /> : <Menu size={24} />}
+          <button onClick={() => setMenuOpen(true)} className="text-slate-300 hover:text-white p-1.5 transition-colors" aria-label="Abrir Menú">
+            <Menu size={28} />
           </button>
         </div>
 
         <AnimatePresence>
           {menuOpen && (
-            <motion.div
-              initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: 'auto' }}
-              exit={{ opacity: 0, height: 0 }}
-              className="lg:hidden border-t border-slate-800 bg-slate-900 overflow-hidden shadow-xl"
-            >
-              <div className="px-6 pt-2 pb-6 flex flex-col">
-                {NAV.map(l => (
-                  <Link
-                    key={l.href}
-                    href={l.href}
-                    onClick={() => setMenuOpen(false)}
-                    className="text-left py-4 text-slate-300 border-b border-slate-800 last:border-0 hover:text-orange-500 transition-colors text-sm font-medium"
-                    style={{ fontFamily: "'Roboto', sans-serif" }}
-                  >
-                    {l.label}
-                  </Link>
-                ))}
-
-              </div>
-            </motion.div>
+            <>
+              {/* Overlay */}
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                onClick={() => setMenuOpen(false)}
+                className="fixed inset-0 bg-black/60 backdrop-blur-sm z-[60]"
+              />
+              
+              {/* Drawer */}
+              <motion.div
+                initial={{ x: '100%' }}
+                animate={{ x: 0 }}
+                exit={{ x: '100%' }}
+                transition={{ type: 'spring', damping: 25, stiffness: 200 }}
+                className="fixed top-0 right-0 h-full w-full max-w-sm bg-slate-950/95 backdrop-blur-md border-l border-slate-800 z-[70] shadow-2xl flex flex-col"
+              >
+                <div className="flex justify-end p-6 border-b border-slate-800">
+                  <button onClick={() => setMenuOpen(false)} className="text-slate-400 hover:text-white transition-colors p-1.5 bg-slate-800/50 hover:bg-slate-800 rounded-full">
+                    <X size={24} />
+                  </button>
+                </div>
+                <div className="flex flex-col py-6 px-8 overflow-y-auto h-full space-y-2">
+                  {MENU_LINKS.map(l => (
+                    <Link
+                      key={l.href}
+                      href={l.href}
+                      onClick={() => setMenuOpen(false)}
+                      className="text-left py-4 text-slate-300 border-b border-slate-800/50 last:border-0 hover:text-orange-500 hover:pl-2 transition-all duration-300 text-lg font-medium"
+                      style={{ fontFamily: "'Roboto', sans-serif" }}
+                    >
+                      {l.label}
+                    </Link>
+                  ))}
+                </div>
+              </motion.div>
+            </>
           )}
         </AnimatePresence>
       </header>
@@ -207,7 +210,7 @@ export default function Layout({ children }) {
 
               <div className="text-white/20 text-[10px] uppercase tracking-widest mb-3 mt-auto" style={{ fontFamily: "'Roboto', sans-serif" }}>Navegación</div>
               <nav className="flex flex-col gap-2.5 lg:items-end">
-                {NAV.map(item => (
+                {MENU_LINKS.map(item => (
                   <Link
                     key={item.href}
                     href={item.href}

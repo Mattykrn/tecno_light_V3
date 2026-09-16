@@ -9,7 +9,7 @@ const WA_LINK_INGENIERIA = getWaLink('Hola, me contacto con el departamento de I
 
 export default function InteractiveRoadHero() {
   return (
-    <section className="relative min-h-[75vh] flex items-center justify-center bg-slate-950 text-white overflow-hidden overflow-x-hidden pb-16 pt-28 md:pt-36 px-4">
+    <section id="inicio" className="relative min-h-[75vh] flex items-center justify-center bg-slate-950 text-white overflow-hidden overflow-x-hidden pb-16 pt-28 md:pt-36 px-4">
       
       {/* Contenido Central */}
       <motion.div 

@@ -45,7 +45,9 @@ export default function Document() {
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <link rel="manifest" href="/manifest.json" />
-        <meta name="theme-color" content="#0B111E" />
+        <meta name="theme-color" content="#ea580c" />
+        <meta name="mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
 
         {/* Google Fonts – Raleway + Roboto */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
