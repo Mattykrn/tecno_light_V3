@@ -1,13 +1,36 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { obrasData } from '../src/data/obrasData';
+import { AnimatePresence, motion } from 'framer-motion';
+import { X } from 'lucide-react';
 
 const MONO = { fontFamily: "'Roboto', sans-serif", fontWeight: 500 };
 const HEADING = { fontFamily: "'Raleway', sans-serif", fontWeight: 900, textTransform: 'uppercase' };
 const BODY = { fontFamily: "'Roboto', sans-serif" };
 
 export default function CatalogoSenales() {
+  const [selectedImage, setSelectedImage] = useState(null);
+
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (e.key === 'Escape') setSelectedImage(null);
+    };
+
+    if (selectedImage) {
+      window.addEventListener('keydown', handleKeyDown);
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+
+    return () => {
+      window.removeEventListener('keydown', handleKeyDown);
+      document.body.style.overflow = '';
+    };
+  }, [selectedImage]);
+
   return (
+    <>
     <section className="py-24 lg:py-32 bg-[#0d0f14] relative overflow-hidden border-b border-white/5">
       <div className="max-w-site mx-auto px-5 lg:px-10 relative z-10">
         
@@ -38,7 +61,10 @@ export default function CatalogoSenales() {
             <div key={item.id} className="flex flex-col h-full bg-slate-900 border border-white/10 rounded-lg overflow-hidden group hover:border-primary/40 transition-all duration-300">
               
               {/* Contenedor de Imagen 100% Limpio, sin textos superpuestos */}
-              <div className="relative w-full aspect-[4/3] bg-neutral-900 p-2 overflow-hidden flex items-center justify-center">
+              <div 
+                className="relative w-full aspect-[4/3] bg-neutral-900 p-2 overflow-hidden flex items-center justify-center cursor-zoom-in group-hover:opacity-90 transition-opacity"
+                onClick={() => setSelectedImage(item.src)}
+              >
                 <Image
                   src={item.src}
                   alt={item.title}
@@ -59,6 +85,43 @@ export default function CatalogoSenales() {
         </div>
         
       </div>
+      </div>
     </section>
+
+      {/* Lightbox / Modal */}
+      <AnimatePresence>
+        {selectedImage && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/90 backdrop-blur-sm"
+            onClick={() => setSelectedImage(null)}
+          >
+            <button
+              className="absolute top-4 right-4 md:top-8 md:right-8 text-white/70 hover:text-white transition-colors bg-black/20 hover:bg-black/40 p-2 rounded-full z-50"
+              onClick={() => setSelectedImage(null)}
+              aria-label="Cerrar vista previa"
+            >
+              <X size={32} />
+            </button>
+            <motion.div
+              initial={{ scale: 0.95, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.95, opacity: 0 }}
+              transition={{ type: "spring", damping: 25, stiffness: 300 }}
+              className="relative w-full max-w-5xl max-h-[85vh] h-full flex items-center justify-center"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <img
+                src={selectedImage}
+                alt="Vista previa ampliada"
+                className="max-w-full max-h-full object-contain rounded-xl shadow-2xl"
+              />
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </>
   );
 }
