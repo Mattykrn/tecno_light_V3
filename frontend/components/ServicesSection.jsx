@@ -30,33 +30,22 @@ export default function ServicesSection() {
               <h3 className="text-white/90 text-xl font-bold uppercase tracking-wider mb-6 border-b border-white/10 pb-3" style={HEADING}>
                 Líneas de Fabricación y Productos
               </h3>
-              <ul className="space-y-4 mb-8">
-                {[
-                  { title: 'Carteles Viales y Transitorios de Obra', desc: 'Carteles reglamentarios, preventivos, informativos y de obra conforme a pliegos de Dirección Nacional y Provincial de Vialidad.' },
-                  { title: 'Cartelería para Municipios y Empresas', desc: 'Nomencladores urbanos, pórticos, ménsulas, cartelería corporativa y de seguridad para plantas industriales.' },
-                  { title: 'Señalización Lumínica Vial', desc: 'Balizas destellantes a led, flechas lumínicas direccionales, tráilers solares para desvíos de obra y paneles chevron.' },
-                  { title: 'Dispositivos Delimitadores', desc: 'Vallas metálicas peatonales y de obra, tambores viales, canalizadores de tránsito, conos y delineadores flexibles.' }
-                ].map(item => (
-                  <li key={item.title} className="flex items-start gap-4 bg-slate-900/50 p-5 rounded-lg border border-white/5 hover:border-primary/30 transition-colors">
-                    <div className="w-6 h-6 rounded-sm bg-primary/10 flex items-center justify-center shrink-0 mt-0.5">
-                      <div className="w-1.5 h-1.5 bg-primary rounded-sm" />
-                    </div>
-                    <div>
-                      <span className="block text-white font-bold text-sm md:text-base mb-1" style={BODY}>{item.title}</span>
-                      <span className="block text-white/70 text-sm md:text-sm leading-relaxed" style={BODY}>{item.desc}</span>
-                    </div>
-                  </li>
-                ))}
-              </ul>
-              <div className="grid grid-cols-3 gap-3 mt-auto">
-                <div className="relative aspect-[4/3] rounded-lg overflow-hidden border border-white/10">
-                  <Image src="/images/carteleria/18244db3-7f2e-4215-be74-cdf5a3a728ed.jpg" alt="Proceso de fabricación" fill className="object-cover" />
+              <p className="text-white/70 text-sm md:text-base leading-relaxed mb-8" style={BODY}>
+                Fabricamos cartelería reglamentaria, preventiva, informativa y de obra conforme a pliegos de Dirección Nacional y Provincial de Vialidad. Producimos nomenclatura urbana, pórticos, ménsulas y cartelería corporativa de seguridad industrial. Desarrollamos señalización lumínica de alta tecnología como balizas destellantes a led, flechas lumínicas direccionales y tráilers solares. Asimismo, elaboramos y proveemos dispositivos delimitadores tales como vallas metálicas peatonales, tambores viales, canalizadores, conos y delineadores flexibles.
+              </p>
+              
+              <div className="grid grid-cols-2 gap-4 mt-auto">
+                <div className="relative aspect-[4/3] rounded-lg overflow-hidden border border-white/10 group">
+                  <Image src="/images/carteleria/18244db3-7f2e-4215-be74-cdf5a3a728ed.jpg" alt="Proceso de fabricación" fill className="object-cover group-hover:scale-105 transition-transform duration-500" />
                 </div>
-                <div className="relative aspect-[4/3] rounded-lg overflow-hidden border border-white/10">
-                  <Image src="/images/carteleria/4f20f2f2-398d-44ca-9061-e3ce6b69e98b.jpg" alt="Terminación de señales" fill className="object-cover" />
+                <div className="relative aspect-[4/3] rounded-lg overflow-hidden border border-white/10 group">
+                  <Image src="/images/carteleria/4f20f2f2-398d-44ca-9061-e3ce6b69e98b.jpg" alt="Terminación de señales" fill className="object-cover group-hover:scale-105 transition-transform duration-500" />
                 </div>
-                <div className="relative aspect-[4/3] rounded-lg overflow-hidden border border-white/10">
-                  <Image src="/images/carteleria/a4944ce5-fe4d-4683-a101-257fbe6158f3.jpg" alt="Planta de producción" fill className="object-cover" />
+                <div className="relative aspect-[4/3] rounded-lg overflow-hidden border border-white/10 group">
+                  <Image src="/images/carteleria/a4944ce5-fe4d-4683-a101-257fbe6158f3.jpg" alt="Planta de producción" fill className="object-cover group-hover:scale-105 transition-transform duration-500" />
+                </div>
+                <div className="relative aspect-[4/3] rounded-lg overflow-hidden border border-white/10 group">
+                  <Image src="/images/carteleria/f40ebce6-d6b2-4472-aadf-adeeb591a989.jpg" alt="Equipamiento" fill className="object-cover group-hover:scale-105 transition-transform duration-500" />
                 </div>
               </div>
             </div>
@@ -66,32 +55,22 @@ export default function ServicesSection() {
               <h3 className="text-white/90 text-xl font-bold uppercase tracking-wider mb-6 border-b border-white/10 pb-3" style={HEADING}>
                 Servicios Viales
               </h3>
-              <ul className="space-y-4 mb-8">
-                {[
-                  { title: 'Alquiler de Señalización', desc: 'Provisión transitoria de carteles, balizas, vallas y dispositivos para desvíos en obras viales, civiles y eventos masivos.' },
-                  { title: 'Demarcación Vial e Industrial', desc: 'Aplicación de pintura termoplástica y reflectiva para sendas peatonales, cordones, estacionamientos y sendas de seguridad en naves industriales.' },
-                  { title: 'Colocación y Montaje', desc: 'Instalación en obra de pórticos viales, defensas metálicas, lomos de burro de caucho, tachas reflectivas y delineadores.' }
-                ].map(item => (
-                  <li key={item.title} className="flex items-start gap-4 bg-slate-900/50 p-5 rounded-lg border border-white/5 hover:border-primary/30 transition-colors">
-                    <div className="w-6 h-6 rounded-sm bg-primary/10 flex items-center justify-center shrink-0 mt-0.5">
-                      <div className="w-1.5 h-1.5 bg-primary rounded-sm" />
-                    </div>
-                    <div>
-                      <span className="block text-white font-bold text-sm md:text-base mb-1" style={BODY}>{item.title}</span>
-                      <span className="block text-white/70 text-sm md:text-sm leading-relaxed" style={BODY}>{item.desc}</span>
-                    </div>
-                  </li>
-                ))}
-              </ul>
-              <div className="grid grid-cols-3 gap-3 mt-auto">
-                <div className="relative aspect-[4/3] rounded-lg overflow-hidden border border-white/10">
-                  <Image src="/images/vallas/-_c5-13.jpg" alt="Acopio de vallas" fill className="object-cover" />
+              <p className="text-white/70 text-sm md:text-base leading-relaxed mb-8" style={BODY}>
+                Ofrecemos provisión transitoria y alquiler de carteles, balizas, vallas y dispositivos para el desarrollo de desvíos en obras viales, civiles y eventos masivos. Realizamos demarcación vial e industrial aplicando pintura termoplástica y reflectiva para sendas peatonales, cordones, estacionamientos y sendas de seguridad en naves industriales. Además, contamos con personal capacitado para la instalación y montaje en obra de pórticos viales, defensas metálicas, reductores de velocidad, tachas reflectivas y delineadores, garantizando los más altos estándares de calidad y seguridad.
+              </p>
+              
+              <div className="grid grid-cols-2 gap-4 mt-auto">
+                <div className="relative aspect-[4/3] rounded-lg overflow-hidden border border-white/10 group">
+                  <Image src="/images/vallas/-_c5-13.jpg" alt="Acopio de vallas" fill className="object-cover group-hover:scale-105 transition-transform duration-500" />
                 </div>
-                <div className="relative aspect-[4/3] rounded-lg overflow-hidden border border-white/10">
-                  <Image src="/images/vallas/-_c5-14.jpg" alt="Colocación de vallas" fill className="object-cover" />
+                <div className="relative aspect-[4/3] rounded-lg overflow-hidden border border-white/10 group">
+                  <Image src="/images/vallas/-_c5-14.jpg" alt="Colocación de vallas" fill className="object-cover group-hover:scale-105 transition-transform duration-500" />
                 </div>
-                <div className="relative aspect-[4/3] rounded-lg overflow-hidden border border-white/10">
-                  <Image src="/images/vallas/-_c5-15.jpg" alt="Alquiler de vallas" fill className="object-cover" />
+                <div className="relative aspect-[4/3] rounded-lg overflow-hidden border border-white/10 group">
+                  <Image src="/images/vallas/-_c5-15.jpg" alt="Alquiler de vallas" fill className="object-cover group-hover:scale-105 transition-transform duration-500" />
+                </div>
+                <div className="relative aspect-[4/3] rounded-lg overflow-hidden border border-white/10 group">
+                  <Image src="/images/vallas/-_c5-16.jpg" alt="Dispositivos" fill className="object-cover group-hover:scale-105 transition-transform duration-500" />
                 </div>
               </div>
             </div>
