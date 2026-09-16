@@ -49,9 +49,23 @@ export default function CatalogoSenales() {
             >
               FABRICACIÓN DE SEÑALIZACIÓN VIAL DE <span className="text-primary">PRIMER NIVEL</span>
             </h2>
-            <p className="text-white/80 text-sm lg:text-base leading-relaxed font-medium mb-8" style={BODY}>
+            <p className="text-white/80 text-sm lg:text-base leading-relaxed font-medium mb-4" style={BODY}>
               Producción de cartelería vial, urbana e industrial con sustratos de alta durabilidad y láminas retrorreflectivas Avery Dennison homologadas.
             </p>
+            <div className="flex flex-wrap gap-3 mt-4 mb-8 text-sm text-slate-300">
+              <span className="px-3 py-1 bg-slate-900 border border-slate-800 rounded-full">
+                ✓ Cartelería Transitoria y Obras en Corrugado Plástico
+              </span>
+              <span className="px-3 py-1 bg-slate-900 border border-slate-800 rounded-full">
+                ✓ Círculos Reglamentarios de Velocidad Homologados (IRAM 3952)
+              </span>
+              <span className="px-3 py-1 bg-slate-900 border border-slate-800 rounded-full">
+                ✓ Señalización Urbana e Institucional para Municipios
+              </span>
+              <span className="px-3 py-1 bg-slate-900 border border-slate-800 rounded-full">
+                ✓ Señales Preventivas y Reglamentarias en Ruta
+              </span>
+            </div>
           </div>
         </div>
 
@@ -62,7 +76,7 @@ export default function CatalogoSenales() {
               
               {/* Contenedor de Imagen 100% Limpio, sin textos superpuestos */}
               <div 
-                className="relative w-full aspect-[4/3] bg-neutral-900 p-2 overflow-hidden flex items-center justify-center cursor-zoom-in group-hover:opacity-90 transition-opacity"
+                className="relative w-full aspect-[4/3] bg-neutral-900 overflow-hidden rounded-t-lg cursor-zoom-in group-hover:opacity-90 transition-opacity"
                 onClick={() => setSelectedImage(item.src)}
               >
                 <Image
@@ -70,7 +84,7 @@ export default function CatalogoSenales() {
                   alt={item.title}
                   fill
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                  className="object-contain"
+                  className="w-full h-full object-cover object-top"
                 />
               </div>
 
