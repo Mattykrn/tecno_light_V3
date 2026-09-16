@@ -58,5 +58,25 @@ export const obrasData = [
     id: 'trans-nocturno-balizas',
     src: '/images/catalogo/transitoria-balizas.jpg',
     title: 'Señalización Nocturna',
+  },
+  {
+    id: "inst-portico-01",
+    src: "/images/instaladas/img_20250925_110019437_portrait.jpg",
+    title: "Cartelería de Gran Porte",
+  },
+  {
+    id: "inst-preventivo-01",
+    src: "/images/instaladas/img_20250925_105022718.jpg",
+    title: "Señalización Preventiva en Ruta",
+  },
+  {
+    id: "inst-urbano-01",
+    src: "/images/instaladas/img_20250925_105837693_portrait.jpg",
+    title: "Señalización Urbana Montada",
+  },
+  {
+    id: "inst-demarcacion-01",
+    src: "/images/instaladas/img_20250925_112732180.jpg",
+    title: "Montaje y Vallado en Obra",
   }
 ];

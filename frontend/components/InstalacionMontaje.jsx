@@ -1,5 +1,7 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
+import { AnimatePresence, motion } from 'framer-motion';
+import { X } from 'lucide-react';
 
 const MONO = { fontFamily: "'Roboto', sans-serif", fontWeight: 500 };
 const HEADING = { fontFamily: "'Raleway', sans-serif", fontWeight: 900, textTransform: 'uppercase' };
@@ -24,7 +26,28 @@ const INSTALACION_DATA = [
 ];
 
 export default function InstalacionMontaje() {
+  const [selectedImage, setSelectedImage] = useState(null);
+
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (e.key === 'Escape') setSelectedImage(null);
+    };
+
+    if (selectedImage) {
+      window.addEventListener('keydown', handleKeyDown);
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+
+    return () => {
+      window.removeEventListener('keydown', handleKeyDown);
+      document.body.style.overflow = '';
+    };
+  }, [selectedImage]);
+
   return (
+    <>
     <section id="instalacion" className="py-20 lg:py-28 bg-[#0d0f14] border-b border-white/5 relative z-10">
       <div className="max-w-site mx-auto px-5 lg:px-10">
         
@@ -50,7 +73,10 @@ export default function InstalacionMontaje() {
           {INSTALACION_DATA.map((item, index) => (
             <div key={index} className="bg-slate-900/50 rounded-xl overflow-hidden border border-white/5 hover:border-primary/30 transition-colors group flex flex-col">
               {/* Foto Limpia Arriba */}
-              <div className="relative aspect-[4/3] w-full overflow-hidden">
+              <div 
+                className="relative aspect-[4/3] w-full overflow-hidden cursor-zoom-in"
+                onClick={() => setSelectedImage(item.img)}
+              >
                 <Image 
                   src={item.img} 
                   alt={item.title} 
@@ -73,5 +99,41 @@ export default function InstalacionMontaje() {
 
       </div>
     </section>
+
+      {/* Lightbox / Modal */}
+      <AnimatePresence>
+        {selectedImage && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/90 backdrop-blur-sm"
+            onClick={() => setSelectedImage(null)}
+          >
+            <button
+              className="absolute top-4 right-4 md:top-8 md:right-8 text-white/70 hover:text-white transition-colors bg-black/20 hover:bg-black/40 p-2 rounded-full z-50"
+              onClick={() => setSelectedImage(null)}
+              aria-label="Cerrar vista previa"
+            >
+              <X size={32} />
+            </button>
+            <motion.div
+              initial={{ scale: 0.95, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.95, opacity: 0 }}
+              transition={{ type: "spring", damping: 25, stiffness: 300 }}
+              className="relative w-full max-w-5xl max-h-[85vh] h-full flex items-center justify-center"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <img
+                src={selectedImage}
+                alt="Vista previa ampliada"
+                className="max-w-full max-h-full object-contain rounded-xl shadow-2xl"
+              />
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </>
   );
 }

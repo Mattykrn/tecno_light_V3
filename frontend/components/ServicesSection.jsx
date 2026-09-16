@@ -1,12 +1,35 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
+import { AnimatePresence, motion } from 'framer-motion';
+import { X } from 'lucide-react';
 
 const MONO = { fontFamily: "'Roboto', sans-serif", fontWeight: 500 };
 const HEADING = { fontFamily: "'Raleway', sans-serif", fontWeight: 900, textTransform: 'uppercase' };
 const BODY = { fontFamily: "'Roboto', sans-serif" };
 
 export default function ServicesSection() {
+  const [selectedImage, setSelectedImage] = useState(null);
+
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (e.key === 'Escape') setSelectedImage(null);
+    };
+
+    if (selectedImage) {
+      window.addEventListener('keydown', handleKeyDown);
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+
+    return () => {
+      window.removeEventListener('keydown', handleKeyDown);
+      document.body.style.overflow = '';
+    };
+  }, [selectedImage]);
+
   return (
+    <>
       <section id="servicios" className="py-20 lg:py-28 bg-[#080A0F] border-b border-white/5">
         <div className="max-w-site mx-auto px-5 lg:px-10">
           
@@ -35,16 +58,16 @@ export default function ServicesSection() {
               </p>
               
               <div className="grid grid-cols-2 gap-4 mt-auto">
-                <div className="relative aspect-[4/3] rounded-lg overflow-hidden border border-white/10 group">
+                <div className="relative aspect-[4/3] rounded-lg overflow-hidden border border-white/10 group cursor-zoom-in" onClick={() => setSelectedImage('/images/carteleria/18244db3-7f2e-4215-be74-cdf5a3a728ed.jpg')}>
                   <Image src="/images/carteleria/18244db3-7f2e-4215-be74-cdf5a3a728ed.jpg" alt="Proceso de fabricación" fill className="object-cover group-hover:scale-105 transition-transform duration-500" />
                 </div>
-                <div className="relative aspect-[4/3] rounded-lg overflow-hidden border border-white/10 group">
+                <div className="relative aspect-[4/3] rounded-lg overflow-hidden border border-white/10 group cursor-zoom-in" onClick={() => setSelectedImage('/images/carteleria/4f20f2f2-398d-44ca-9061-e3ce6b69e98b.jpg')}>
                   <Image src="/images/carteleria/4f20f2f2-398d-44ca-9061-e3ce6b69e98b.jpg" alt="Terminación de señales" fill className="object-cover group-hover:scale-105 transition-transform duration-500" />
                 </div>
-                <div className="relative aspect-[4/3] rounded-lg overflow-hidden border border-white/10 group">
+                <div className="relative aspect-[4/3] rounded-lg overflow-hidden border border-white/10 group cursor-zoom-in" onClick={() => setSelectedImage('/images/carteleria/a4944ce5-fe4d-4683-a101-257fbe6158f3.jpg')}>
                   <Image src="/images/carteleria/a4944ce5-fe4d-4683-a101-257fbe6158f3.jpg" alt="Planta de producción" fill className="object-cover group-hover:scale-105 transition-transform duration-500" />
                 </div>
-                <div className="relative aspect-[4/3] rounded-lg overflow-hidden border border-white/10 group">
+                <div className="relative aspect-[4/3] rounded-lg overflow-hidden border border-white/10 group cursor-zoom-in" onClick={() => setSelectedImage('/images/carteleria/f40ebce6-d6b2-4472-aadf-adeeb591a989.jpg')}>
                   <Image src="/images/carteleria/f40ebce6-d6b2-4472-aadf-adeeb591a989.jpg" alt="Equipamiento" fill className="object-cover group-hover:scale-105 transition-transform duration-500" />
                 </div>
               </div>
@@ -60,16 +83,16 @@ export default function ServicesSection() {
               </p>
               
               <div className="grid grid-cols-2 gap-4 mt-auto">
-                <div className="relative aspect-[4/3] rounded-lg overflow-hidden border border-white/10 group">
+                <div className="relative aspect-[4/3] rounded-lg overflow-hidden border border-white/10 group cursor-zoom-in" onClick={() => setSelectedImage('/images/vallas/-_c5-13.jpg')}>
                   <Image src="/images/vallas/-_c5-13.jpg" alt="Acopio de vallas" fill className="object-cover group-hover:scale-105 transition-transform duration-500" />
                 </div>
-                <div className="relative aspect-[4/3] rounded-lg overflow-hidden border border-white/10 group">
+                <div className="relative aspect-[4/3] rounded-lg overflow-hidden border border-white/10 group cursor-zoom-in" onClick={() => setSelectedImage('/images/vallas/-_c5-14.jpg')}>
                   <Image src="/images/vallas/-_c5-14.jpg" alt="Colocación de vallas" fill className="object-cover group-hover:scale-105 transition-transform duration-500" />
                 </div>
-                <div className="relative aspect-[4/3] rounded-lg overflow-hidden border border-white/10 group">
+                <div className="relative aspect-[4/3] rounded-lg overflow-hidden border border-white/10 group cursor-zoom-in" onClick={() => setSelectedImage('/images/vallas/-_c5-15.jpg')}>
                   <Image src="/images/vallas/-_c5-15.jpg" alt="Alquiler de vallas" fill className="object-cover group-hover:scale-105 transition-transform duration-500" />
                 </div>
-                <div className="relative aspect-[4/3] rounded-lg overflow-hidden border border-white/10 group">
+                <div className="relative aspect-[4/3] rounded-lg overflow-hidden border border-white/10 group cursor-zoom-in" onClick={() => setSelectedImage('/images/vallas/-_c5-16.jpg')}>
                   <Image src="/images/vallas/-_c5-16.jpg" alt="Dispositivos" fill className="object-cover group-hover:scale-105 transition-transform duration-500" />
                 </div>
               </div>
@@ -78,5 +101,41 @@ export default function ServicesSection() {
           </div>
         </div>
       </section>
+
+      {/* Lightbox / Modal */}
+      <AnimatePresence>
+        {selectedImage && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/90 backdrop-blur-sm"
+            onClick={() => setSelectedImage(null)}
+          >
+            <button
+              className="absolute top-4 right-4 md:top-8 md:right-8 text-white/70 hover:text-white transition-colors bg-black/20 hover:bg-black/40 p-2 rounded-full z-50"
+              onClick={() => setSelectedImage(null)}
+              aria-label="Cerrar vista previa"
+            >
+              <X size={32} />
+            </button>
+            <motion.div
+              initial={{ scale: 0.95, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.95, opacity: 0 }}
+              transition={{ type: "spring", damping: 25, stiffness: 300 }}
+              className="relative w-full max-w-5xl max-h-[85vh] h-full flex items-center justify-center"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <img
+                src={selectedImage}
+                alt="Vista previa ampliada"
+                className="max-w-full max-h-full object-contain rounded-xl shadow-2xl"
+              />
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </>
   );
 }
