@@ -76,7 +76,7 @@ export default function CatalogoSenales() {
               
               {/* Contenedor de Imagen 100% Limpio, sin textos superpuestos */}
               <div 
-                className="relative w-full aspect-[4/3] bg-neutral-900 overflow-hidden rounded-t-lg cursor-zoom-in group-hover:opacity-90 transition-opacity"
+                className="relative w-full aspect-[4/3] bg-neutral-900 overflow-hidden rounded-lg cursor-zoom-in group-hover:opacity-90 transition-opacity"
                 onClick={() => setSelectedImage(item.src)}
               >
                 <Image
@@ -86,13 +86,6 @@ export default function CatalogoSenales() {
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   className="w-full h-full object-cover object-top"
                 />
-              </div>
-
-              {/* Contenedor de Texto */}
-              <div className="flex-1 p-5 lg:p-6 bg-slate-900 flex flex-col justify-between">
-                <h3 className="text-white font-bold text-sm leading-snug" style={BODY}>
-                  {item.title}
-                </h3>
               </div>
             </div>
           ))}
