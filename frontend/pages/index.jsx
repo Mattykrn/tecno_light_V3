@@ -10,6 +10,7 @@ import TrafficJetSection from '../components/TrafficJetSection';
 import ErrorBoundary from '../components/ErrorBoundary';
 import CatalogoSenales from '../components/CatalogoSenales';
 import ServicesSection from '../components/ServicesSection';
+import InstalacionMontaje from '../components/InstalacionMontaje';
 
 
 
@@ -144,9 +145,14 @@ export default function Home() {
         <CatalogoSenales />
       </ErrorBoundary>
 
-      {/* ══════════ LÍNEAS DE FABRICACIÓN Y SERVICIOS VIALES ══════════ */}
+      {/* ══════════ LÍNEAS DE FABRICACIÓN Y SERVICIOS ══════════ */}
       <ErrorBoundary>
         <ServicesSection />
+      </ErrorBoundary>
+
+      {/* ══════════ INSTALACIÓN Y MONTAJE ══════════ */}
+      <ErrorBoundary>
+        <InstalacionMontaje />
       </ErrorBoundary>
 
 

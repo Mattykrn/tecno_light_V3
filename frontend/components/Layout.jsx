@@ -25,7 +25,7 @@ const IgIcon = ({ size = 16 }) => (
 const MENU_LINKS = [
   { label: 'Inicio', href: '/#inicio' },
   { label: 'Fabricación & Catálogo', href: '/#catalogo' },
-  { label: 'Servicios Viales & Balizamiento', href: '/#servicios' },
+  { label: 'Servicios & Instalación en Ruta', href: '/#instalacion' },
   { label: 'Seguridad Industrial y EPP', href: '/#seguridad' },
   { label: 'Planta Industrial & Tecnología', href: '/#planta' },
   { label: 'Quiénes Somos', href: '/#nosotros' },
