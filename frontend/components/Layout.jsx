@@ -123,67 +123,90 @@ export default function Layout({ children }) {
 
       <footer className="bg-[#080A0F] border-t border-white/5 py-14 lg:py-16">
         <div className="max-w-site mx-auto px-5 lg:px-10">
-          <div className="grid lg:grid-cols-12 gap-10 mb-12">
-            <div className="lg:col-span-4">
+          <div className="grid lg:grid-cols-12 gap-10 lg:gap-8 mb-12">
+            
+            {/* Col 1: Logo e Institucional */}
+            <div className="lg:col-span-4 flex flex-col items-start">
               <div className="mb-6">
                 <Image src="/images/logo-tecnolight.png" alt="Tecno Light S.R.L." width={160} height={48} loading="lazy" style={{ width: 'auto', height: '44px' }} />
               </div>
-              <p className="text-white/70 text-sm leading-relaxed max-w-xs mb-6" style={{ fontFamily: "'Roboto', sans-serif" }}>
-                Señalización & Protección Personal. Referentes en seguridad vial, demarcación horizontal y SEGURIDAD INDUSTRIAL. Lunes a Viernes de 8:00 a 17:00 hs. (Sábados Cerrado).
+              <p className="text-white/70 text-sm leading-relaxed max-w-xs mb-8" style={{ fontFamily: "'Roboto', sans-serif" }}>
+                Señalización & Protección Personal. Referentes en seguridad vial, demarcación horizontal y seguridad industrial. Lunes a Viernes de 8:00 a 17:00 hs.
               </p>
-              <div className="flex flex-wrap items-center gap-3">
-                <a
-                  href={WA_LINK}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 bg-[#25D366]/12 border border-[#25D366]/20 text-[#25D366] text-xs font-semibold px-4 py-2.5 rounded-[4px] hover:bg-[#25D366]/20 transition-colors"
-                  style={{ fontFamily: "'Roboto', sans-serif" }}
-                >
-                  <WaIcon size={16} /> Contactar por WhatsApp
-                </a>
-                <a
-                  href="https://www.instagram.com/tecnolight.srl/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 bg-[#E1306C]/12 border border-[#E1306C]/20 text-[#E1306C] text-xs font-semibold px-4 py-2.5 rounded-[4px] hover:bg-[#E1306C]/20 transition-colors"
-                  style={{ fontFamily: "'Roboto', sans-serif" }}
-                >
-                  <IgIcon size={16} /> Seguinos en Instagram
-                </a>
-              </div>
               
-              <div className="mt-4 flex flex-col items-start gap-2">
+              <div className="flex flex-col items-start gap-2 mb-8">
                 <span className="text-[11px] uppercase tracking-wider text-slate-400 font-semibold">
                   Aval oficial:
                 </span>
                 <img 
                   src="/images/avery-trafficjet-white.svg" 
                   alt="Avery Dennison TrafficJet Xpress" 
-                  className="h-9 w-auto object-contain brightness-0 invert opacity-90 hover:opacity-100 transition-opacity"
+                  className="h-8 w-auto object-contain brightness-0 invert opacity-90 hover:opacity-100 transition-opacity"
                 />
               </div>
+
+              {/* Redes Sociales - Sin redundancia */}
+              <a
+                href="https://www.instagram.com/tecnolight.srl/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center w-10 h-10 bg-[#E1306C]/10 border border-[#E1306C]/20 text-[#E1306C] rounded-full hover:bg-[#E1306C] hover:text-white transition-all mt-auto"
+                aria-label="Instagram Oficial"
+              >
+                <IgIcon size={18} />
+              </a>
             </div>
 
-            <div className="lg:col-span-3 flex flex-col mb-10 lg:mb-0 space-y-4">
-              <div className="flex items-start gap-3 text-white/80 hover:text-white transition-colors group">
-                <span className="text-sm leading-relaxed">
-                  <strong>Sede Comercial:</strong> Suipacha 3243, Santa Fe, Argentina.<br/>
-                  <strong>Planta de Producción:</strong> Parque Industrial Los Polígonos, Ciudad de Santa Fe, Argentina.<br/>
-                  <strong>Sitio Web Oficial:</strong> <a href="https://www.tecnolightsrl.com" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">www.tecnolightsrl.com</a>
-                </span>
+            {/* Col 2: Sedes Institucionales */}
+            <div className="lg:col-span-5 grid sm:grid-cols-2 gap-8 lg:gap-4 xl:gap-8">
+              {/* Sede Santa Fe */}
+              <div className="flex flex-col space-y-3">
+                <h4 className="text-white font-bold text-sm tracking-wide uppercase border-b border-white/10 pb-2 inline-block max-w-max">
+                  Sede Central Santa Fe
+                </h4>
+                <div className="flex flex-col gap-2 text-slate-300 text-sm leading-relaxed">
+                  <p>Suipacha 3243<br/>Santa Fe Capital</p>
+                  <a href="tel:03424553582" className="hover:text-primary transition-colors flex items-center gap-1.5 group">
+                    <span className="font-semibold text-slate-400 group-hover:text-primary/70 transition-colors">Tel/Fax:</span> (0342) 455-3582
+                  </a>
+                  <a href="mailto:tecnolightsrl@arnet.com.ar" className="hover:text-primary transition-colors text-[13.5px]">
+                    tecnolightsrl@arnet.com.ar
+                  </a>
+                </div>
               </div>
-              <a href={WA_LINK} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-[#25D366] hover:text-white transition-colors font-bold">
-                <WaIcon size={18} />
-                <span className="text-sm">WhatsApp de contacto y cotizaciones</span>
-              </a>
-              <a href="mailto:tecnolight@tecnolightsrl.com?subject=Solicitud%20de%20Cotizaci%C3%B3n" className="flex items-center gap-3 text-white/70 hover:text-primary transition-colors">
-                <span className="text-sm">tecnolight@tecnolightsrl.com</span>
-              </a>
+
+              {/* Sede Rosario */}
+              <div className="flex flex-col space-y-3">
+                <h4 className="text-white font-bold text-sm tracking-wide uppercase border-b border-white/10 pb-2 inline-block max-w-max">
+                  Sede Rosario
+                </h4>
+                <div className="flex flex-col gap-2 text-slate-300 text-sm leading-relaxed">
+                  <p>Gutenberg 1122<br/>Rosario, Santa Fe</p>
+                  <a href="tel:03414388444" className="hover:text-primary transition-colors flex items-center gap-1.5 group">
+                    <span className="font-semibold text-slate-400 group-hover:text-primary/70 transition-colors">Tel/Fax:</span> (0341) 438-8444
+                  </a>
+                  <a href="mailto:tecnolightrsr@arnet.com.ar" className="hover:text-primary transition-colors text-[13.5px]">
+                    tecnolightrsr@arnet.com.ar
+                  </a>
+                </div>
+              </div>
             </div>
 
-            <div className="lg:col-span-5 flex flex-col items-start lg:items-end">
-              <div className="text-white/20 text-[10px] uppercase tracking-widest mb-5" style={{ fontFamily: "'Roboto', sans-serif" }}>Navegación</div>
-              <nav className="flex flex-col gap-3 lg:items-end">
+            {/* Col 3: Canal Digital / Navegación */}
+            <div className="lg:col-span-3 flex flex-col lg:items-end">
+              <h4 className="text-white font-bold text-[13px] tracking-wide uppercase mb-4 lg:text-right">Canal Comercial Digital</h4>
+              <a 
+                href={WA_LINK} 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="inline-flex items-center justify-center gap-2 bg-[#25D366]/10 border border-[#25D366]/20 text-[#25D366] text-sm font-semibold px-4 py-2.5 rounded-lg hover:bg-[#25D366] hover:text-white transition-all w-full sm:w-auto lg:w-full max-w-[220px] mb-8"
+              >
+                <WaIcon size={18} />
+                Cotizaciones Rápidas
+              </a>
+
+              <div className="text-white/20 text-[10px] uppercase tracking-widest mb-3 mt-auto" style={{ fontFamily: "'Roboto', sans-serif" }}>Navegación</div>
+              <nav className="flex flex-col gap-2.5 lg:items-end">
                 {NAV.map(item => (
                   <Link
                     key={item.href}
@@ -195,13 +218,15 @@ export default function Layout({ children }) {
                 ))}
               </nav>
             </div>
+            
           </div>
 
+          {/* Copyright Row */}
           <div className="pt-7 border-t border-white/5 flex flex-col sm:flex-row justify-between items-center gap-3">
-            <div className="text-white/18 text-xs" style={{ fontFamily: "'Roboto', sans-serif" }}>
-              &copy; 2026 Tecno Light S.R.L. &mdash; CUIT: 30-69238932-4 | Todos los derechos reservados.
+            <div className="text-white/20 text-xs" style={{ fontFamily: "'Roboto', sans-serif" }}>
+              &copy; {new Date().getFullYear()} Tecno Light S.R.L. &mdash; CUIT: 30-69238932-4 | Todos los derechos reservados.
             </div>
-            <div className="text-white/18 text-xs" style={{ fontFamily: "'Roboto', sans-serif" }}>Rosario &middot; Santa Fe &middot; Argentina</div>
+            <div className="text-white/20 text-xs" style={{ fontFamily: "'Roboto', sans-serif" }}>Rosario &middot; Santa Fe &middot; Argentina</div>
           </div>
         </div>
       </footer>

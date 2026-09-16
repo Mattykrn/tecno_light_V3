@@ -49,16 +49,16 @@ const CANALES = [
 
 const UBICACIONES = [
   {
-    id: 'comercial',
-    label: 'Sede Comercial',
-    value: 'Suipacha 3243, Santa Fe Capital, Argentina.',
-    desc: 'Atención al cliente, cotizaciones y ventas.',
+    id: 'santa-fe',
+    label: 'Sede Central Santa Fe',
+    value: 'Suipacha 3243, Santa Fe Capital',
+    desc: 'Tel/Fax: (0342) 455-3582 | tecnolightsrl@arnet.com.ar',
   },
   {
-    id: 'planta',
-    label: 'Planta de Producción',
-    value: 'Parque Industrial Los Polígonos, Santa Fe Capital.',
-    desc: 'Fabricación, retiro de mercadería y visitas técnicas.',
+    id: 'rosario',
+    label: 'Sede Rosario',
+    value: 'Gutenberg 1122, Rosario, Santa Fe',
+    desc: 'Tel/Fax: (0341) 438-8444 | tecnolightrsr@arnet.com.ar',
   },
 ];
 
