@@ -40,10 +40,10 @@ export default function SeguridadIndustrial() {
         </div>
 
         <div className="grid lg:grid-cols-12 gap-10 mb-16 items-center">
-          <div className="lg:col-span-5 relative h-[400px] lg:h-[500px] w-full rounded-xl overflow-hidden border border-white/10 shadow-2xl">
+          <div className="lg:col-span-5 relative h-[380px] lg:h-[480px] w-full rounded-xl overflow-hidden border border-white/10 shadow-2xl">
             <Image 
-              src="/images/epp/portada.jpg" 
-              alt="Preparación de pedidos de EPP y Seguridad Industrial" 
+              src="/images/epp/epp-catalogo-clean.jpg" 
+              alt="Equipamiento de Protección Personal (EPP) y Seguridad Industrial" 
               fill
               className="object-cover hover:scale-105 transition-transform duration-500"
             />

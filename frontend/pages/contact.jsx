@@ -53,12 +53,14 @@ const UBICACIONES = [
     label: 'Sede Central Santa Fe',
     value: 'Suipacha 3243, Santa Fe Capital',
     desc: 'Tel/Fax: (0342) 455-3582 | tecnolightsrl@arnet.com.ar',
+    href: 'https://www.google.com/maps/search/?api=1&query=Suipacha+3243,+Santa+Fe,+Argentina'
   },
   {
     id: 'rosario',
     label: 'Sede Rosario',
     value: 'Gutenberg 1122, Rosario, Santa Fe',
     desc: 'Tel/Fax: (0341) 438-8444 | tecnolightrsr@arnet.com.ar',
+    href: 'https://www.google.com/maps/search/?api=1&query=Gutenberg+1122,+Rosario,+Santa+Fe'
   },
 ];
 
@@ -157,14 +159,22 @@ export default function Contact() {
 
           {/* Ubicaciones + horarios */}
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-8">
-            {UBICACIONES.map(({ id, label, value, desc }) => (
+            {UBICACIONES.map(({ id, label, value, desc, href }) => (
               <div key={id} className="bg-card border border-white/6 rounded-[6px] p-6 flex flex-col gap-3">
                 <div className="w-9 h-9 rounded-[4px] bg-white/5 border border-white/10 flex items-center justify-center shrink-0">
                   <MapPin size={15} className="text-muted-foreground" />
                 </div>
                 <div>
                   <div className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground mb-1" style={MONO}>{label}</div>
-                  <div className="text-foreground text-sm font-semibold mb-1" style={BODY}>{value}</div>
+                  <div className="text-foreground text-sm font-semibold mb-1" style={BODY}>
+                    {href ? (
+                      <a href={href} target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
+                        {value}
+                      </a>
+                    ) : (
+                      value
+                    )}
+                  </div>
                   <div className="text-muted-foreground/55 text-[11px]" style={BODY}>{desc}</div>
                 </div>
               </div>

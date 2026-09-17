@@ -11,10 +11,10 @@ export default function TrafficJetSection() {
   const [selectedImage, setSelectedImage] = useState(null);
 
   const galleryImages = [
-    '/images/trafficjet/gallery/1.jpg',
-    '/images/trafficjet/gallery/2.jpg',
-    '/images/trafficjet/gallery/3.jpg',
-    '/images/trafficjet/gallery/4.jpg'
+    '/images/trafficjet/gallery/proceso-1-impresion.jpg',
+    '/images/carteleria/995e50b7-a487-4b00-9a51-81c2bced29e4.jpg',
+    '/images/carteleria/7703b4ba-cb46-453a-9191-9d19a4fbb134.jpg',
+    '/images/carteleria/5d253747-77b7-4bec-a91b-4fbb8c84df9b.jpg'
   ];
 
   return (

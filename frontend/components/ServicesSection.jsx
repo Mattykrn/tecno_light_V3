@@ -58,17 +58,17 @@ export default function ServicesSection() {
               </p>
               
               <div className="grid grid-cols-2 gap-4 mt-auto">
-                <div className="relative aspect-[4/3] rounded-lg overflow-hidden border border-white/10 group cursor-zoom-in" onClick={() => setSelectedImage('/images/carteleria/18244db3-7f2e-4215-be74-cdf5a3a728ed.jpg')}>
-                  <Image src="/images/carteleria/18244db3-7f2e-4215-be74-cdf5a3a728ed.jpg" alt="Proceso de fabricación" fill className="object-cover group-hover:scale-105 transition-transform duration-500" />
+                <div className="relative aspect-[4/3] rounded-lg overflow-hidden border border-white/10 group cursor-zoom-in" onClick={() => setSelectedImage('/images/carteleria/187c79f2-bbad-4dd0-9068-c308cc4f8e0a.jpg')}>
+                  <Image src="/images/carteleria/187c79f2-bbad-4dd0-9068-c308cc4f8e0a.jpg" alt="Proceso de fabricación microprismática" fill className="object-cover object-top group-hover:scale-105 transition-transform duration-500" />
                 </div>
-                <div className="relative aspect-[4/3] rounded-lg overflow-hidden border border-white/10 group cursor-zoom-in" onClick={() => setSelectedImage('/images/carteleria/4f20f2f2-398d-44ca-9061-e3ce6b69e98b.jpg')}>
-                  <Image src="/images/carteleria/4f20f2f2-398d-44ca-9061-e3ce6b69e98b.jpg" alt="Terminación de señales" fill className="object-cover group-hover:scale-105 transition-transform duration-500" />
+                <div className="relative aspect-[4/3] rounded-lg overflow-hidden border border-white/10 group cursor-zoom-in" onClick={() => setSelectedImage('/images/carteleria/5d253747-77b7-4bec-a91b-4fbb8c84df9b.jpg')}>
+                  <Image src="/images/carteleria/5d253747-77b7-4bec-a91b-4fbb8c84df9b.jpg" alt="Señalética de seguridad industrial" fill className="object-cover object-top group-hover:scale-105 transition-transform duration-500" />
                 </div>
-                <div className="relative aspect-[4/3] rounded-lg overflow-hidden border border-white/10 group cursor-zoom-in" onClick={() => setSelectedImage('/images/carteleria/a4944ce5-fe4d-4683-a101-257fbe6158f3.jpg')}>
-                  <Image src="/images/carteleria/a4944ce5-fe4d-4683-a101-257fbe6158f3.jpg" alt="Planta de producción" fill className="object-cover group-hover:scale-105 transition-transform duration-500" />
+                <div className="relative aspect-[4/3] rounded-lg overflow-hidden border border-white/10 group cursor-zoom-in" onClick={() => setSelectedImage('/images/carteleria/31f90751-37f1-4e9f-99b3-d35031e24fc7.jpg')}>
+                  <Image src="/images/carteleria/31f90751-37f1-4e9f-99b3-d35031e24fc7.jpg" alt="Paneles técnicos con QR de trazabilidad" fill className="object-cover object-top group-hover:scale-105 transition-transform duration-500" />
                 </div>
                 <div className="relative aspect-[4/3] rounded-lg overflow-hidden border border-white/10 group cursor-zoom-in" onClick={() => setSelectedImage('/images/carteleria/f40ebce6-d6b2-4472-aadf-adeeb591a989.jpg')}>
-                  <Image src="/images/carteleria/f40ebce6-d6b2-4472-aadf-adeeb591a989.jpg" alt="Equipamiento" fill className="object-cover group-hover:scale-105 transition-transform duration-500" />
+                  <Image src="/images/carteleria/f40ebce6-d6b2-4472-aadf-adeeb591a989.jpg" alt="Ensamble y terminación de señales" fill className="object-cover object-top group-hover:scale-105 transition-transform duration-500" />
                 </div>
               </div>
             </div>
@@ -83,17 +83,17 @@ export default function ServicesSection() {
               </p>
               
               <div className="grid grid-cols-2 gap-4 mt-auto">
-                <div className="relative aspect-[4/3] rounded-lg overflow-hidden border border-white/10 group cursor-zoom-in" onClick={() => setSelectedImage('/images/vallas/-_c5-13.jpg')}>
-                  <Image src="/images/vallas/-_c5-13.jpg" alt="Acopio de vallas" fill className="object-cover group-hover:scale-105 transition-transform duration-500" />
-                </div>
                 <div className="relative aspect-[4/3] rounded-lg overflow-hidden border border-white/10 group cursor-zoom-in" onClick={() => setSelectedImage('/images/vallas/-_c5-14.jpg')}>
-                  <Image src="/images/vallas/-_c5-14.jpg" alt="Colocación de vallas" fill className="object-cover group-hover:scale-105 transition-transform duration-500" />
+                  <Image src="/images/vallas/-_c5-14.jpg" alt="Logística y transporte de vallas" fill className="object-cover object-top group-hover:scale-105 transition-transform duration-500" />
                 </div>
                 <div className="relative aspect-[4/3] rounded-lg overflow-hidden border border-white/10 group cursor-zoom-in" onClick={() => setSelectedImage('/images/vallas/-_c5-15.jpg')}>
-                  <Image src="/images/vallas/-_c5-15.jpg" alt="Alquiler de vallas" fill className="object-cover group-hover:scale-105 transition-transform duration-500" />
+                  <Image src="/images/vallas/-_c5-15.jpg" alt="Despliegue de vallado en predio" fill className="object-cover object-top group-hover:scale-105 transition-transform duration-500" />
                 </div>
                 <div className="relative aspect-[4/3] rounded-lg overflow-hidden border border-white/10 group cursor-zoom-in" onClick={() => setSelectedImage('/images/vallas/-_c5-16.jpg')}>
-                  <Image src="/images/vallas/-_c5-16.jpg" alt="Dispositivos" fill className="object-cover group-hover:scale-105 transition-transform duration-500" />
+                  <Image src="/images/vallas/-_c5-16.jpg" alt="Contención perimetral en eventos" fill className="object-cover object-top group-hover:scale-105 transition-transform duration-500" />
+                </div>
+                <div className="relative aspect-[4/3] rounded-lg overflow-hidden border border-white/10 group cursor-zoom-in" onClick={() => setSelectedImage('/images/vallas/-_c5-17.jpg')}>
+                  <Image src="/images/vallas/-_c5-17.jpg" alt="Carga de estructuras con autoelevador" fill className="object-cover object-top group-hover:scale-105 transition-transform duration-500" />
                 </div>
               </div>
             </div>

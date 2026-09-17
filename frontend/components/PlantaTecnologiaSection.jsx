@@ -220,9 +220,15 @@ export default function PlantaTecnologiaSection() {
             </div>
             <div>
               <div className="text-white text-xs font-bold" style={MONO}>Planta de Producción</div>
-              <div className="text-white/40 text-[11px]" style={BODY}>
+              <a 
+                href="https://www.google.com/maps/search/?api=1&query=Parque+Industrial+Los+Poligonos,+Santa+Fe,+Argentina"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-white/40 text-[11px] hover:text-[#FF5A1F] transition-colors block" 
+                style={BODY}
+              >
                 Parque Industrial Los Polígonos — Santa Fe Capital, Argentina
-              </div>
+              </a>
             </div>
           </div>
           <a

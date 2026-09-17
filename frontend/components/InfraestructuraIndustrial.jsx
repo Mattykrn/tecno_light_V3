@@ -11,12 +11,12 @@ const BODY = { fontFamily: "'Roboto', sans-serif" };
 const WA_LINK_VISITA = getWaLink('Hola, me interesa coordinar una visita técnica a la planta o solicitar una memoria descriptiva de sus procesos.');
 
 const PROYECTOS_Y_PLANTA = [
-  "/images/instaladas/img_20250925_104539925.jpg",
-  "/images/instaladas/img_20250925_105022718.jpg",
-  "/images/instaladas/img_20250925_105339730_hdr_ae.jpg",
-  "/images/instaladas/img_20250925_110019437_portrait.jpg",
-  "/images/instaladas/img_20250925_110259680.jpg",
-  "/images/instaladas/img_20250925_112732180.jpg"
+  "/images/projects/santa-fe-gigante-1.jpg",
+  "/images/projects/santa-fe-3.jpg",
+  "/images/projects/parque-2.jpg",
+  "/images/catalogo_curado/infra-san-jeronimo.jpg",
+  "/images/catalogo_curado/infra-esperanza.jpg",
+  "/images/catalogo_curado/infra-omnibus-camioneta.jpg"
 ];
 
 export default function InfraestructuraIndustrial() {

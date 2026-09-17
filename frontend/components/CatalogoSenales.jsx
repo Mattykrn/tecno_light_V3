@@ -74,18 +74,28 @@ export default function CatalogoSenales() {
           {obrasData.map((item) => (
             <div key={item.id} className="flex flex-col h-full bg-slate-900 border border-white/10 rounded-lg overflow-hidden group hover:border-primary/40 transition-all duration-300">
               
-              {/* Contenedor de Imagen 100% Limpio, sin textos superpuestos */}
+              {/* Contenedor de Imagen 100% Limpio en 4:3 */}
               <div 
-                className="relative w-full aspect-[4/3] bg-neutral-900 overflow-hidden rounded-lg cursor-zoom-in group-hover:opacity-90 transition-opacity"
+                className="relative w-full aspect-[4/3] bg-neutral-900 overflow-hidden cursor-zoom-in group-hover:opacity-95 transition-opacity"
                 onClick={() => setSelectedImage(item.src)}
               >
                 <Image
                   src={item.src}
                   alt={item.title}
                   fill
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                  className="w-full h-full object-cover object-top"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
+                  className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
                 />
+              </div>
+              <div className="p-4 flex flex-col flex-grow bg-slate-900/90 border-t border-white/5">
+                <h3 className="text-white font-bold text-sm leading-tight mb-1" style={MONO}>
+                  {item.title}
+                </h3>
+                {item.subtitle && (
+                  <p className="text-white/60 text-xs leading-relaxed mt-auto" style={BODY}>
+                    {item.subtitle}
+                  </p>
+                )}
               </div>
             </div>
           ))}

@@ -176,7 +176,9 @@ export default function Layout({ children }) {
                   Sede Central Santa Fe
                 </h4>
                 <div className="flex flex-col gap-2 text-slate-300 text-sm leading-relaxed">
-                  <p>Suipacha 3243<br/>Santa Fe Capital</p>
+                  <a href="https://www.google.com/maps/search/?api=1&query=Suipacha+3243,+Santa+Fe,+Argentina" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors block">
+                    Suipacha 3243<br/>Santa Fe Capital
+                  </a>
                   <a href="tel:03424553582" className="hover:text-primary transition-colors flex items-center gap-1.5 group">
                     <span className="font-semibold text-slate-400 group-hover:text-primary/70 transition-colors">Tel/Fax:</span> (0342) 455-3582
                   </a>
@@ -192,7 +194,9 @@ export default function Layout({ children }) {
                   Sede Rosario
                 </h4>
                 <div className="flex flex-col gap-2 text-slate-300 text-sm leading-relaxed">
-                  <p>Gutenberg 1122<br/>Rosario, Santa Fe</p>
+                  <a href="https://www.google.com/maps/search/?api=1&query=Gutenberg+1122,+Rosario,+Santa+Fe" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors block">
+                    Gutenberg 1122<br/>Rosario, Santa Fe
+                  </a>
                   <a href="tel:03414388444" className="hover:text-primary transition-colors flex items-center gap-1.5 group">
                     <span className="font-semibold text-slate-400 group-hover:text-primary/70 transition-colors">Tel/Fax:</span> (0341) 438-8444
                   </a>

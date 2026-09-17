@@ -11,17 +11,17 @@ const INSTALACION_DATA = [
   {
     title: 'Montaje de Señalización Vertical en Rutas y Autovías',
     desc: 'Hincado de postes de acero, hormigonado de bases y fijación antivandálica de carteles preventivos y reglamentarios en banquinas y zonas de camino.',
-    img: '/images/instaladas/img_20250925_105022718.jpg'
+    img: '/images/instalacion_curada/montaje-ruta-rp70.jpg'
   },
   {
     title: 'Cartelería de Gran Porte y Señalización Aérea',
     desc: 'Fabricación y montaje de pescantes, ménsulas y pórticos viales con láminas microprismáticas Avery Dennison de alta reflectividad.',
-    img: '/images/instaladas/img_20250925_110019437_portrait.jpg'
+    img: '/images/instalacion_curada/cartel-gran-porte-ruta13.jpg'
   },
   {
     title: 'Demarcación, Vallado y Balizamiento de Obras Urbanas',
     desc: 'Delimitación de intervenciones en vía pública, zanjeos y obras de saneamiento/pavimento con defensas metálicas, cartelería transitoria de obra y balizamiento nocturno.',
-    img: '/images/instaladas/img_20250925_112732180.jpg'
+    img: '/images/instalacion_curada/balizamiento-obra-urbana.jpg'
   }
 ];
 
