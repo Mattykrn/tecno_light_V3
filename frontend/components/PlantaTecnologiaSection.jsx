@@ -29,7 +29,8 @@ const VIDEOS = [
   },
   {
     id: 'v3',
-    src: '/videos/reel-produccion.mp4',
+    src: '/videos/trafficjet-production.mp4',
+    poster: '/images/poster-impresora.jpg',
     title: 'Impresión y Armado',
     desc: 'Secuencias de impresión digital reflectiva sobre láminas Avery Dennison y ensamblado industrial de señales.',
     badge: 'Control de Calidad',
@@ -64,6 +65,7 @@ function VideoCard({ video, index }) {
         <video
           ref={videoRef}
           src={video.src}
+          poster={video.poster}
           autoPlay
           muted
           loop
