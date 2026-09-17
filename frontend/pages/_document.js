@@ -45,7 +45,7 @@ export default function Document() {
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <link rel="manifest" href="/manifest.json" />
-        <meta name="theme-color" content="#ea580c" />
+        <meta name="theme-color" content="#0b111e" />
         <meta name="mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
 
@@ -95,7 +95,7 @@ export default function Document() {
               email: 'ventas@tecnolight.com.ar',
               address: {
                 '@type': 'PostalAddress',
-                streetAddress: 'Salvador Caputto 3243',
+                streetAddress: 'Suipacha 3243',
                 addressLocality: 'Santa Fe',
                 addressRegion: 'Santa Fe',
                 addressCountry: 'AR',
