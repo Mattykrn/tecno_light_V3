@@ -14,6 +14,9 @@ node_modules/
 *.mp4
 !frontend/public/videos/trafficjet-impresion.mp4
 !frontend/public/videos/trafficjet/impresion-trafficjet.mp4
+!frontend/public/videos/trafficjet/video_home.mp4
+!frontend/public/videos/trafficjet/video_home.mov
+!frontend/public/videos/trafficjet-production.mp4
 !frontend/public/videos/cartel-fabricacion.mp4
 !frontend/public/videos/senales-instalacion.mp4
 !frontend/public/videos/reel-produccion.mp4

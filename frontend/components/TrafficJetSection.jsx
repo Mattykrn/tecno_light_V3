@@ -42,19 +42,7 @@ export default function TrafficJetSection() {
           
           {/* Columna Izquierda: Showcase Audiovisual (5 cols) */}
           <div className="lg:col-span-6 flex flex-col">
-            <div className="relative group rounded-2xl overflow-hidden border border-slate-700/80 bg-black shadow-2xl aspect-video">
-              <div className="absolute top-3 right-3 z-20">
-                <span className="px-3 py-1 rounded-full bg-emerald-500/90 text-white border border-emerald-400/50 text-[11px] font-bold tracking-wider uppercase shadow-lg shadow-emerald-500/20 backdrop-blur-md">
-                  Laminado Anti-Graffiti
-                </span>
-              </div>
-              <div className="absolute top-3 left-3 z-20 flex items-center gap-2 bg-black/60 backdrop-blur-md px-3 py-1 rounded-full border border-white/15">
-                <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-                <span className="text-[10px] font-bold text-white tracking-wider uppercase" style={MONO}>
-                  Planta Activa
-                </span>
-              </div>
-
+            <div className="relative rounded-2xl overflow-hidden border border-slate-700 bg-black shadow-2xl aspect-video group">
               <video 
                 autoPlay 
                 loop 
@@ -62,12 +50,22 @@ export default function TrafficJetSection() {
                 playsInline 
                 preload="metadata"
                 className="w-full h-full object-cover"
-                poster="/images/trafficjet/proceso-impresion-poster.jpg"
               >
-                <source src="/videos/trafficjet-impresion.mp4" type="video/mp4" />
-                <source src="/videos/trafficjet/impresion-trafficjet.mp4" type="video/mp4" />
+                <source src="/videos/trafficjet/video_home.mp4" type="video/mp4" />
+                <source src="/videos/trafficjet/video_home.mov" type="video/quicktime" />
+                Tu navegador no soporta la reproducción de video HTML5.
               </video>
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent pointer-events-none" />
+
+              {/* Overlay sutil de borde técnico */}
+              <div className="absolute inset-0 pointer-events-none rounded-2xl ring-1 ring-inset ring-white/10" />
+
+              {/* Badge flotante sobre el video */}
+              <div className="absolute bottom-3 left-3 bg-slate-950/80 backdrop-blur-md px-3 py-1.5 rounded-lg border border-white/10 flex items-center gap-2">
+                <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+                <span className="text-[11px] font-semibold text-slate-200 uppercase tracking-wider">
+                  En planta: Impresión TrafficJet™ Xpress
+                </span>
+              </div>
             </div>
 
             <div className="mt-3 bg-slate-800/80 backdrop-blur-sm border border-slate-700/70 px-4 py-3 rounded-xl shadow-lg text-center">
