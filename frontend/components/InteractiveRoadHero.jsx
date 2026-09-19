@@ -9,8 +9,11 @@ const WA_LINK_INGENIERIA = getWaLink('Hola, me contacto con el departamento de I
 
 export default function InteractiveRoadHero() {
   return (
-    <section id="inicio" className="relative min-h-[75vh] flex items-center justify-center bg-slate-950 text-white overflow-hidden overflow-x-hidden pt-32 md:pt-40 pb-16 px-4">
+    <section id="inicio" className="relative min-h-[75vh] flex items-center justify-center bg-slate-950 text-white overflow-hidden overflow-x-hidden pt-32 md:pt-40 pb-16 px-4 scroll-mt-28">
       
+      {/* Overlay de legibilidad y contraste */}
+      <div className="absolute inset-0 bg-gradient-to-b from-slate-950/90 via-slate-950/75 to-slate-950 pointer-events-none" />
+
       {/* Contenido Central */}
       <motion.div 
         className="relative z-10 max-w-5xl mx-auto text-center space-y-6 flex flex-col items-center"
@@ -19,8 +22,8 @@ export default function InteractiveRoadHero() {
         transition={{ duration: 0.8, ease: "easeOut" }}
       >
 
-        {/* Logo institucional centrado sobre el H1 */}
-        <div className="flex justify-center items-center mb-6">
+        {/* Logo institucional centrado sobre el H1 con respiro vertical */}
+        <div className="flex justify-center items-center mt-6 mb-6">
           <img 
             src="/images/logo-tecnolight-white.png" 
             alt="TECNO LIGHT S.R.L." 

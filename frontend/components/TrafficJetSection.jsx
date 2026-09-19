@@ -48,9 +48,9 @@ export default function TrafficJetSection() {
   ];
 
   return (
-    <section id="tecnologia" className="bg-slate-900 border-y border-slate-800 py-16 lg:py-24 px-4 relative">
+    <section id="tecnologia" className="bg-slate-900 border-y border-slate-800 py-16 lg:py-24 px-4 relative scroll-mt-28">
       {/* Anchor complementario para navegación */}
-      <div id="planta-tecnologia" className="absolute -top-20" />
+      <div id="planta-tecnologia" className="absolute top-0 scroll-mt-28" />
 
       <div className="max-w-7xl mx-auto">
         
@@ -65,6 +65,19 @@ export default function TrafficJetSection() {
           <p className="text-slate-300 text-base md:text-lg leading-relaxed font-medium" style={BODY}>
             Capacidad de impresión directa sobre láminas prismáticas bajo estrictas normas de Vialidad Nacional y Provincial, garantizando uniformidad cromática y retrorreflexión controlada.
           </p>
+
+          {/* Badges de especificación técnica */}
+          <div className="flex flex-wrap items-center justify-center gap-2 pt-2">
+            <span className="px-2.5 py-1 rounded-md bg-white/5 border border-white/10 text-[11px] font-semibold tracking-wider text-slate-300 uppercase">
+              Norma ASTM D4956
+            </span>
+            <span className="px-2.5 py-1 rounded-md bg-white/5 border border-white/10 text-[11px] font-semibold tracking-wider text-slate-300 uppercase">
+              Tintas Eco-solventes UV
+            </span>
+            <span className="px-2.5 py-1 rounded-md bg-emerald-500/10 border border-emerald-500/20 text-[11px] font-semibold tracking-wider text-emerald-400 uppercase">
+              Sobrelaminado Anti-Graffiti
+            </span>
+          </div>
         </div>
 
         {/* Layout en 2 Columnas */}
@@ -80,7 +93,7 @@ export default function TrafficJetSection() {
                 playsInline 
                 preload="metadata"
                 poster="/images/trafficjet/video_poster.jpg"
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover pointer-events-none"
               >
                 <source src="/videos/trafficjet/video_home.mp4" type="video/mp4" />
                 Tu navegador no soporta la reproducción de video HTML5.

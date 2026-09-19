@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
-import { X } from 'lucide-react';
+import { X, ZoomIn } from 'lucide-react';
 import { AnimatePresence, motion } from 'framer-motion';
 import { getWaLink } from '../utils/whatsapp';
 
@@ -42,7 +42,8 @@ export default function InfraestructuraIndustrial() {
 
   return (
     <>
-      <section id="infraestructura" className="py-20 lg:py-28 bg-[#04060A] border-b border-white/5 relative z-10">
+      <section id="infraestructura" className="py-20 lg:py-28 bg-[#04060A] border-b border-white/5 relative z-10 scroll-mt-28">
+        <div id="obras" className="absolute top-0 scroll-mt-28" />
         <div className="max-w-site mx-auto px-5 lg:px-10">
           
           {/* Header de la sección */}
@@ -62,12 +63,12 @@ export default function InfraestructuraIndustrial() {
             </p>
           </div>
 
-          {/* Galería de Imágenes Limpia */}
+          {/* Galería de Imágenes Limpia con indicador de zoom */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
             {PROYECTOS_Y_PLANTA.map((src, index) => (
               <div 
                 key={index} 
-                className="relative overflow-hidden rounded-2xl border border-slate-800 bg-slate-900 shadow-lg aspect-[4/3] group cursor-zoom-in hover:opacity-90 transition-opacity"
+                className="group relative cursor-zoom-in overflow-hidden rounded-xl border border-slate-700/60 hover:border-orange-500/60 transition-all duration-300 bg-slate-900 shadow-lg aspect-[4/3]"
                 onClick={() => setSelectedImage(src)}
               >
                 <Image 
@@ -77,6 +78,12 @@ export default function InfraestructuraIndustrial() {
                   sizes="(max-width: 768px) 100vw, 33vw"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                 />
+                {/* Overlay hover sutil con ícono de lupa centrado */}
+                <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-200 bg-black/30 absolute inset-0 flex items-center justify-center pointer-events-none">
+                  <div className="w-10 h-10 rounded-full bg-black/60 backdrop-blur-sm border border-white/20 flex items-center justify-center text-white shadow-lg">
+                    <ZoomIn size={20} />
+                  </div>
+                </div>
               </div>
             ))}
           </div>

@@ -31,7 +31,7 @@ export default function CatalogoSenales() {
 
   return (
     <>
-    <section id="catalogo" className="py-24 lg:py-32 bg-[#0d0f14] relative overflow-hidden border-b border-white/5">
+    <section id="catalogo" className="py-24 lg:py-32 bg-[#0d0f14] relative overflow-hidden border-b border-white/5 scroll-mt-28">
       <div className="max-w-site mx-auto px-5 lg:px-10 relative z-10">
         
         {/* Header Institucional Sobrio */}

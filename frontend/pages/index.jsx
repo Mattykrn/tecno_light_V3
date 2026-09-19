@@ -42,8 +42,8 @@ export default function Home() {
       <InteractiveRoadHero />
 
 
-      {/* ══════════ CLIENTES CORPORATIVOS ══════════ */}
-      <section className="py-12 bg-slate-100 bg-hex-pattern border-b border-black/5">
+      {/* ══════════ CLIENTES CORPORATIVOS (Transición técnica a sección clara) ══════════ */}
+      <section className="py-12 bg-slate-100 bg-hex-pattern border-t border-slate-200 shadow-sm border-b border-black/5">
         <div className="max-w-site mx-auto px-5 lg:px-10 text-center">
           <div className="flex items-center justify-center gap-3 mb-6">
             <div className="h-px w-8 bg-slate-300 flex-shrink-0" />
@@ -64,7 +64,8 @@ export default function Home() {
       </section>
 
       {/* ══════════ QUIÉNES SOMOS ══════════ */}
-      <section id="nosotros" className="py-20 lg:py-28 bg-white bg-hex-pattern text-slate-900 border-b border-black/5">
+      <section id="nosotros" className="py-20 lg:py-28 bg-white bg-hex-pattern text-slate-900 border-b border-black/5 relative scroll-mt-28">
+        <div id="quienes-somos" className="absolute top-0 scroll-mt-28" />
         <div className="max-w-4xl mx-auto px-5 lg:px-10 text-center">
           <h2 className="text-3xl md:text-5xl font-extrabold mb-8 text-slate-900" style={HEADING}>
             QUIÉNES SOMOS
@@ -89,7 +90,8 @@ export default function Home() {
       </ErrorBoundary>
 
       {/* ══════════ PROCESO INDUSTRIAL DE FABRICACIÓN ══════════ */}
-      <section id="planta" className="py-20 lg:py-28 bg-[#0d0f14] relative overflow-hidden border-b border-white/5">
+      <section id="planta" className="py-20 lg:py-28 bg-[#0d0f14] relative overflow-hidden border-b border-white/5 scroll-mt-28">
+        <div id="planta-industrial" className="absolute top-0 scroll-mt-28" />
         <div className="max-w-site mx-auto px-5 lg:px-10 relative z-10">
           
           <div className="text-center max-w-4xl mx-auto mb-16">
@@ -168,7 +170,7 @@ export default function Home() {
 
 
       {/* ══════════ CONTACTO ══════════ */}
-      <section id="contacto" className="py-24 lg:py-32 bg-slate-50 bg-hex-pattern border-t border-black/5 text-slate-900">
+      <section id="contacto" className="py-24 lg:py-32 bg-slate-50 bg-hex-pattern border-t border-slate-200 shadow-sm text-slate-900 scroll-mt-28 relative">
         <div className="max-w-site mx-auto px-5 lg:px-10">
 
           {/* Header */}
@@ -187,11 +189,11 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Cards de canales — 3 columnas en desktop */}
+          {/* Cards de canales — 3 columnas en desktop con fondo blanco sólido y sombra suave */}
           <div className="grid grid-cols-1 md:grid-cols-3 max-w-6xl mx-auto gap-6 mb-10">
 
             {/* Sede Santa Fe */}
-            <div className="flex flex-col gap-4 bg-white border border-black/10 shadow-sm rounded-[6px] p-6">
+            <div className="flex flex-col gap-4 bg-white border border-slate-200/80 shadow-sm rounded-[6px] p-6">
               <a href="https://www.google.com/maps/search/?api=1&query=Suipacha+3243,+Santa+Fe,+Argentina" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-[4px] bg-black/5 border border-black/10 flex items-center justify-center shrink-0 hover:text-orange-500 cursor-pointer transition-colors text-[#333]">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/>
@@ -217,7 +219,7 @@ export default function Home() {
             </div>
 
             {/* Sede Rosario */}
-            <div className="flex flex-col gap-4 bg-white border border-black/10 shadow-sm rounded-[6px] p-6">
+            <div className="flex flex-col gap-4 bg-white border border-slate-200/80 shadow-sm rounded-[6px] p-6">
               <a href="https://www.google.com/maps/search/?api=1&query=Gutenberg+1122,+Rosario,+Santa+Fe,+Argentina" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-[4px] bg-black/5 border border-black/10 flex items-center justify-center shrink-0 hover:text-orange-500 cursor-pointer transition-colors text-[#333]">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/>
@@ -243,7 +245,7 @@ export default function Home() {
             </div>
 
             {/* Planta Industrial */}
-            <div className="flex flex-col gap-4 bg-white border border-black/10 shadow-sm rounded-[6px] p-6">
+            <div className="flex flex-col gap-4 bg-white border border-slate-200/80 shadow-sm rounded-[6px] p-6">
               <a href="https://www.google.com/maps/search/?api=1&query=Parque+Industrial+Los+Poligonos,+Santa+Fe,+Argentina" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-[4px] bg-black/5 border border-black/10 flex items-center justify-center shrink-0 hover:text-orange-500 cursor-pointer transition-colors text-[#333]">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/>
@@ -269,12 +271,12 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Zona de cobertura */}
-          <div className="border border-black/10 shadow-sm rounded-[4px] p-5 bg-[#F8F9FA]">
+          {/* Zona de cobertura con tarjeta blanca sólida */}
+          <div className="border border-slate-200/80 shadow-sm rounded-[4px] p-5 bg-white">
             <div className="text-[10px] font-bold uppercase tracking-widest text-black/50 mb-3" style={MONO}>Zona de cobertura</div>
             <div className="flex flex-wrap gap-2">
               {['Santa Fe', 'Rosario', 'Gran Rosario', 'Córdoba', 'Entre Ríos', 'Buenos Aires', '+6 provincias'].map(z => (
-                <span key={z} className="bg-white border border-black/10 text-black/80 font-medium text-xs px-3 py-1 rounded-[3px]" style={BODY}>{z}</span>
+                <span key={z} className="bg-slate-50 border border-slate-200/80 text-black/80 font-medium text-xs px-3 py-1 rounded-[3px]" style={BODY}>{z}</span>
               ))}
             </div>
           </div>

@@ -10,7 +10,7 @@ const GA_ID = process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID;
 
 export default function Document() {
   return (
-    <Html lang="es">
+    <Html lang="es" className="scroll-smooth">
       <Head>
         <meta charSet="utf-8" />
         <meta

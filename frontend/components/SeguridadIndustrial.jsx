@@ -20,7 +20,8 @@ const EPP_ITEMS = [
 
 export default function SeguridadIndustrial() {
   return (
-    <section id="seguridad" className="py-24 lg:py-32 bg-[#0B0F17] relative overflow-hidden border-b border-white/5">
+    <section id="seguridad" className="py-24 lg:py-32 bg-[#0B0F17] relative overflow-hidden border-b border-white/5 scroll-mt-28">
+      <div id="seguridad-industrial" className="absolute top-0 scroll-mt-28" />
       <div className="max-w-site mx-auto px-5 lg:px-10 relative z-10">
         
         {/* Header */}

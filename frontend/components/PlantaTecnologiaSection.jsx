@@ -124,7 +124,7 @@ function VideoCard({ video, index }) {
 
 export default function PlantaTecnologiaSection() {
   return (
-    <section id="planta" className="py-24 lg:py-32 bg-[#08090E] relative overflow-hidden">
+    <section id="planta" className="py-24 lg:py-32 bg-[#08090E] relative overflow-hidden scroll-mt-28">
       {/* Subtle grid bg */}
       <div
         className="absolute inset-0 pointer-events-none opacity-[0.025]"

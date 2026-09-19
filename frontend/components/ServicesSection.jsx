@@ -30,7 +30,7 @@ export default function ServicesSection() {
 
   return (
     <>
-      <section id="servicios" className="py-20 lg:py-28 bg-[#080A0F] border-b border-white/5">
+      <section id="servicios" className="py-20 lg:py-28 bg-[#080A0F] border-b border-white/5 scroll-mt-28">
         <div className="max-w-site mx-auto px-5 lg:px-10">
           
           <div className="mb-16 text-center">

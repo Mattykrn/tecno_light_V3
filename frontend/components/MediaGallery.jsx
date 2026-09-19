@@ -86,7 +86,7 @@ export default function MediaGallery({ items = [], columns = 3 }) {
           <div
             key={item.id}
             onClick={() => setLightbox(item)}
-            className="group relative flex flex-col bg-[#0d0f14] border border-white/10 rounded-[8px] overflow-hidden text-left w-full cursor-zoom-in hover:border-primary/50 shadow-xl transition-all duration-300 hover:-translate-y-1"
+            className="group relative cursor-zoom-in overflow-hidden rounded-xl border border-slate-700/60 hover:border-orange-500/60 transition-all duration-300 flex flex-col bg-[#0d0f14] text-left w-full shadow-xl hover:-translate-y-1"
             aria-label={`Ver: ${item.title}`}
             role="button"
             tabIndex={0}
@@ -101,6 +101,11 @@ export default function MediaGallery({ items = [], columns = 3 }) {
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
               />
+              <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-200 bg-black/30 absolute inset-0 flex items-center justify-center pointer-events-none">
+                <div className="w-10 h-10 rounded-full bg-black/60 backdrop-blur-sm border border-white/20 flex items-center justify-center text-white shadow-lg">
+                  <ZoomIn size={20} />
+                </div>
+              </div>
             </div>
             
             {/* Contenedor de Textos (Abajo de la foto) */}

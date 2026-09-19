@@ -48,7 +48,7 @@ export default function InstalacionMontaje() {
 
   return (
     <>
-    <section id="instalacion" className="py-20 lg:py-28 bg-[#0d0f14] border-b border-white/5 relative z-10">
+    <section id="instalacion" className="py-20 lg:py-28 bg-[#0d0f14] border-b border-white/5 relative z-10 scroll-mt-28">
       <div className="max-w-site mx-auto px-5 lg:px-10">
         
         {/* Header */}
