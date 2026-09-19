@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ShieldCheck, Droplet, Clock, Sparkles } from 'lucide-react';
+import { ShieldCheck, Droplet, Clock, Sparkles, X } from 'lucide-react';
 
 const MONO = { fontFamily: "'Roboto', sans-serif", fontWeight: 500 };
 const HEADING = { fontFamily: "'Raleway', sans-serif", fontWeight: 900, textTransform: 'uppercase' };
@@ -9,6 +9,24 @@ const BODY = { fontFamily: "'Roboto', sans-serif" };
 
 export default function TrafficJetSection() {
   const [selectedImage, setSelectedImage] = useState(null);
+
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (e.key === 'Escape') setSelectedImage(null);
+    };
+
+    if (selectedImage) {
+      window.addEventListener('keydown', handleKeyDown);
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+
+    return () => {
+      window.removeEventListener('keydown', handleKeyDown);
+      document.body.style.overflow = '';
+    };
+  }, [selectedImage]);
 
   const galleryImages = [
     {
@@ -61,10 +79,10 @@ export default function TrafficJetSection() {
                 muted 
                 playsInline 
                 preload="metadata"
+                poster="/images/trafficjet/video_poster.jpg"
                 className="w-full h-full object-cover"
               >
                 <source src="/videos/trafficjet/video_home.mp4" type="video/mp4" />
-                <source src="/videos/trafficjet/video_home.mov" type="video/quicktime" />
                 Tu navegador no soporta la reproducción de video HTML5.
               </video>
 
@@ -176,14 +194,14 @@ export default function TrafficJetSection() {
             {galleryImages.map((img, idx) => (
               <div 
                 key={idx}
-                className="relative aspect-square rounded-xl overflow-hidden border border-slate-700 cursor-pointer group hover:border-orange-500/50 transition-colors"
+                className="relative aspect-[4/3] rounded-xl overflow-hidden border border-slate-700 cursor-pointer group hover:border-orange-500/50 transition-colors"
                 onClick={() => setSelectedImage(img.src)}
               >
                 <Image 
                   src={img.src} 
                   alt={img.alt}
                   fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors" />
               </div>
@@ -199,26 +217,26 @@ export default function TrafficJetSection() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-[100] bg-black/95 backdrop-blur-sm flex items-center justify-center p-4"
+            className="fixed inset-0 z-50 bg-black/90 backdrop-blur-md flex items-center justify-center p-4"
             onClick={() => setSelectedImage(null)}
           >
-            <div className="relative w-full max-w-5xl aspect-video md:aspect-auto md:h-[85vh]">
-              <Image
+            <button 
+              type="button"
+              className="fixed top-4 right-4 z-[60] flex items-center justify-center w-11 h-11 min-w-[44px] min-h-[44px] rounded-full bg-slate-900/90 hover:bg-orange-600 text-white border border-white/20 transition-all shadow-xl active:scale-95 cursor-pointer"
+              onClick={() => setSelectedImage(null)}
+              aria-label="Cerrar imagen"
+            >
+              <X size={24} />
+            </button>
+            <div 
+              className="relative w-full max-w-5xl aspect-video md:aspect-auto md:h-[85vh] flex items-center justify-center"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <img
                 src={selectedImage}
                 alt="Vista ampliada"
-                fill
-                className="object-contain"
-                sizes="100vw"
+                className="max-w-full max-h-full object-contain rounded-xl shadow-2xl"
               />
-              <button 
-                className="absolute top-4 right-4 text-white/70 hover:text-white bg-black/50 p-2 rounded-full backdrop-blur-md"
-                onClick={() => setSelectedImage(null)}
-              >
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <line x1="18" y1="6" x2="6" y2="18"></line>
-                  <line x1="6" y1="6" x2="18" y2="18"></line>
-                </svg>
-              </button>
             </div>
           </motion.div>
         )}

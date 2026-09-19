@@ -9,7 +9,7 @@ const WA_LINK_INGENIERIA = getWaLink('Hola, me contacto con el departamento de I
 
 export default function InteractiveRoadHero() {
   return (
-    <section id="inicio" className="relative min-h-[75vh] flex items-center justify-center bg-slate-950 text-white overflow-hidden overflow-x-hidden pb-16 pt-28 md:pt-36 px-4">
+    <section id="inicio" className="relative min-h-[75vh] flex items-center justify-center bg-slate-950 text-white overflow-hidden overflow-x-hidden pt-32 md:pt-40 pb-16 px-4">
       
       {/* Contenido Central */}
       <motion.div 
@@ -20,11 +20,11 @@ export default function InteractiveRoadHero() {
       >
 
         {/* Logo institucional centrado sobre el H1 */}
-        <div className="flex justify-center items-center mb-8">
+        <div className="flex justify-center items-center mb-6">
           <img 
             src="/images/logo-tecnolight-white.png" 
             alt="TECNO LIGHT S.R.L." 
-            className="h-32 sm:h-40 md:h-48 w-auto object-contain drop-shadow-[0_4px_16px_rgba(0,0,0,0.6)]"
+            className="h-16 sm:h-20 md:h-24 w-auto object-contain drop-shadow-[0_4px_16px_rgba(0,0,0,0.6)]"
           />
         </div>
 
@@ -62,22 +62,22 @@ export default function InteractiveRoadHero() {
         </div>
 
         {/* Aval Avery Dennison Inferior */}
-        <div className="pt-8 mt-10 border-t border-white/10 flex flex-col sm:flex-row items-center justify-center gap-5 w-full max-w-4xl mx-auto px-4">
-          <span className="text-xs sm:text-sm uppercase tracking-widest text-slate-300 font-bold text-center sm:text-left">
-            Distribuidores y convertidores certificados:
+        <div className="pt-8 mt-10 border-t border-white/10 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-5 w-full max-w-4xl mx-auto px-2 sm:px-4">
+          <span className="text-xs sm:text-sm uppercase tracking-widest text-slate-200 font-bold text-center sm:text-left leading-snug">
+            DISTRIBUIDORES Y CONVERTIDORES <span className="text-[#FF5A1F]">CERTIFICADOS:</span>
           </span>
 
-          <div className="flex items-center gap-4 bg-white/95 border border-white/30 px-5 py-2.5 rounded-xl shadow-xl hover:bg-white transition-all">
+          <div className="flex items-center gap-3 sm:gap-4 bg-white/95 border border-white/30 px-4 sm:px-5 py-2 sm:py-2.5 rounded-xl shadow-xl hover:bg-white transition-all max-w-full shrink-0">
             <img 
               src="/images/avery-dennison-official.svg" 
               alt="Avery Dennison" 
-              className="h-7 sm:h-8 w-auto object-contain" 
+              className="h-6 sm:h-8 w-auto object-contain shrink-0" 
             />
-            <div className="h-6 w-px bg-slate-200" />
+            <div className="h-5 sm:h-6 w-px bg-slate-200 shrink-0" />
             <img 
               src="/images/trafficjet-xpress-official.svg" 
               alt="TrafficJet™ Xpress" 
-              className="h-6 sm:h-7 w-auto object-contain" 
+              className="h-5 sm:h-7 w-auto object-contain shrink-0" 
             />
           </div>
         </div>

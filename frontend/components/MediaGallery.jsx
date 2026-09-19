@@ -98,7 +98,7 @@ export default function MediaGallery({ items = [], columns = 3 }) {
                 src={item.src}
                 alt={item.title}
                 fill
-                className="w-full h-full object-contain p-2 transition-transform duration-700 group-hover:scale-105"
+                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
               />
             </div>
@@ -122,7 +122,7 @@ export default function MediaGallery({ items = [], columns = 3 }) {
       {/* LIGHTBOX */}
       {mounted && lightbox && createPortal(
         <div
-          className="fixed inset-0 z-[999999] flex items-center justify-center bg-black/90 backdrop-blur-sm p-4 select-none touch-none"
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 backdrop-blur-md p-4 select-none touch-none"
           onClick={closeLightbox}
           onMouseUp={handleMouseUp}
           onMouseLeave={handleMouseUp}
@@ -134,9 +134,9 @@ export default function MediaGallery({ items = [], columns = 3 }) {
             onClick={(e) => { e.stopPropagation(); closeLightbox(); }}
             onTouchEnd={(e) => { e.preventDefault(); e.stopPropagation(); closeLightbox(); }}
             style={{ touchAction: 'manipulation' }}
-            className="fixed top-4 right-4 z-[1000000] flex items-center justify-center w-14 h-14 rounded-full bg-slate-900 border-2 border-white/80 text-white text-3xl font-bold shadow-2xl hover:bg-orange-600 active:scale-95 transition-all cursor-pointer"
+            className="fixed top-4 right-4 z-[60] flex items-center justify-center w-11 h-11 min-w-[44px] min-h-[44px] rounded-full bg-slate-900/90 hover:bg-orange-600 text-white border border-white/20 shadow-2xl active:scale-95 transition-all cursor-pointer"
           >
-            ✕
+            <X size={24} className="text-white" />
           </button>
 
           <div

@@ -75,7 +75,7 @@ export default function InfraestructuraIndustrial() {
                   alt="Trabajo realizado - Tecno Light S.R.L."
                   fill
                   sizes="(max-width: 768px) 100vw, 33vw"
-                  className="object-cover group-hover:scale-105 transition-transform duration-300"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                 />
               </div>
             ))}
@@ -104,15 +104,16 @@ export default function InfraestructuraIndustrial() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/90 backdrop-blur-sm"
+            className="bg-black/90 backdrop-blur-md z-50 fixed inset-0 flex items-center justify-center p-4"
             onClick={() => setSelectedImage(null)}
           >
             <button
-              className="absolute top-4 right-4 md:top-8 md:right-8 text-white/70 hover:text-white transition-colors bg-black/20 hover:bg-black/40 p-2 rounded-full"
+              type="button"
+              className="fixed top-4 right-4 z-[60] flex items-center justify-center w-11 h-11 min-w-[44px] min-h-[44px] rounded-full bg-slate-900/90 hover:bg-orange-600 text-white border border-white/20 transition-all shadow-xl active:scale-95 cursor-pointer"
               onClick={() => setSelectedImage(null)}
-              aria-label="Cerrar vista previa"
+              aria-label="Cerrar imagen"
             >
-              <X size={32} />
+              <X size={24} className="text-white" />
             </button>
             <motion.div
               initial={{ scale: 0.95, opacity: 0 }}
