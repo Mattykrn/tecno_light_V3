@@ -13,28 +13,28 @@ export const mediaData = {
   // ─────────────────────────────────────────────────────────────────────
   fabricacion: [
     {
-      id: "fab-carteles-corrugados-01",
-      src: "/images/media/fab-carteles-corrugados-01.jpg",
+      id: "fab-carteles-corrugados-04",
+      src: "/images/media/fab-carteles-corrugados-04.jpg",
       title: "Carteles Viales y Transitorios de Obra",
-      subtitle: "Carteles corrugados: Calle Cerrada, Precaución Zona de Obras, Desnivel de Calzada",
+      subtitle: "Carteles corrugados de alta visibilidad para delimitación y desvíos.",
       category: "Fabricación",
-      alt: "Carteles corrugados naranjas y amarillos de señalización transitoria de obra"
+      alt: "Carteles corrugados de señalización transitoria de obra"
     },
     {
-      id: "fab-circulos-velocidad",
-      src: "/images/media/fab-circulos-velocidad.jpg",
-      title: "Discos Retrorreflectivos de Velocidad Máxima",
-      subtitle: "Homologados para transporte de carga y pasajeros (IRAM 3952).",
+      id: "fab-planta-carteles-industriales-01",
+      src: "/images/media/fab-planta-carteles-industriales-01.jpg",
+      title: "Fabricación de Señalética Industrial",
+      subtitle: "Cartelería para plantas productivas, naves y depósitos.",
       category: "Fabricación",
-      alt: "Círculos reflectivos reglamentarios de velocidad máxima"
+      alt: "Paneles de señalética y seguridad industrial en nave de producción"
     },
     {
-      id: "fab-cartel-radar-dpv",
-      src: "/images/media/fab-cartel-radar-dpv.jpg",
-      title: "Cartelería Institucional para Municipios",
-      subtitle: "Cartel informativo vial para control de tránsito urbano.",
+      id: "fab-planta-carteles-industriales-02",
+      src: "/images/media/fab-planta-carteles-industriales-02.jpg",
+      title: "Cartelería Corporativa y de Seguridad",
+      subtitle: "Paneles normados y pictogramas para control de accesos e industrias.",
       category: "Fabricación",
-      alt: "Cartel rectangular azul de Control de Tránsito"
+      alt: "Cartelería de seguridad y delimitación industrial terminada"
     }
   ],
 
@@ -43,12 +43,12 @@ export const mediaData = {
   // ─────────────────────────────────────────────────────────────────────
   servicios: [
     {
-      id: "svc-senalizacion-obra-01",
-      src: "/images/media/svc-senalizacion-obra-01.jpg",
+      id: "svc-senalizacion-obra-02",
+      src: "/images/media/svc-senalizacion-obra-02.jpg",
       title: "Vallado y Balizamiento de Obra en Vía Pública",
       subtitle: "Delimitación perimetral y seguridad en excavaciones urbanas.",
       category: "Servicios",
-      alt: "Señalización nocturna completa de obra vial urbana"
+      alt: "Señalización y balizamiento de obra vial urbana"
     },
     {
       id: "svc-senales-rp70-01",

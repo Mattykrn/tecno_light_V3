@@ -11,10 +11,22 @@ export default function TrafficJetSection() {
   const [selectedImage, setSelectedImage] = useState(null);
 
   const galleryImages = [
-    '/images/trafficjet/gallery/proceso-1-impresion.jpg',
-    '/images/carteleria/995e50b7-a487-4b00-9a51-81c2bced29e4.jpg',
-    '/images/carteleria/7703b4ba-cb46-453a-9191-9d19a4fbb134.jpg',
-    '/images/carteleria/5d253747-77b7-4bec-a91b-4fbb8c84df9b.jpg'
+    {
+      src: '/images/trafficjet/gallery/proceso-1-impresion.jpg',
+      alt: 'Plotter industrial TrafficJet™ Xpress imprimiendo lámina reflectiva'
+    },
+    {
+      src: '/images/carteleria/4f20f2f2-398d-44ca-9061-e3ce6b69e98b.jpg',
+      alt: 'Bobinas de lámina microprismática retrorreflectiva Avery Dennison en planta'
+    },
+    {
+      src: '/images/trafficjet/impresion-microprismatica-detalle.jpg',
+      alt: 'Detalle de curado UV sobre estructura microprismática de alta intensidad'
+    },
+    {
+      src: '/images/carteleria/efed8a3c-6e4d-4d5f-9e20-20d38467c75a.jpg',
+      alt: 'Cartelería vial terminada de alta visibilidad en mesa de ensamble'
+    }
   ];
 
   return (
@@ -161,15 +173,15 @@ export default function TrafficJetSection() {
           </div>
           
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {galleryImages.map((src, idx) => (
+            {galleryImages.map((img, idx) => (
               <div 
                 key={idx}
                 className="relative aspect-square rounded-xl overflow-hidden border border-slate-700 cursor-pointer group hover:border-orange-500/50 transition-colors"
-                onClick={() => setSelectedImage(src)}
+                onClick={() => setSelectedImage(img.src)}
               >
                 <Image 
-                  src={src} 
-                  alt={`Muestra de impresión ${idx + 1}`}
+                  src={img.src} 
+                  alt={img.alt}
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-500"
                 />
