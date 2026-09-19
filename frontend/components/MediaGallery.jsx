@@ -113,10 +113,10 @@ export default function MediaGallery({ items = [], columns = 3 }) {
               <div className="text-primary text-[10px] font-bold tracking-[0.2em] uppercase mb-2" style={MONO}>
                 {item.category}
               </div>
-              <div className="text-white text-[15px] font-bold leading-snug mb-2" style={HEADING}>
+              <div className="text-sm sm:text-base font-bold text-white tracking-normal leading-snug mb-2" style={HEADING}>
                 {item.title}
               </div>
-              <div className="text-white/60 text-xs leading-relaxed line-clamp-2 mt-auto" style={BODY}>
+              <div className="text-xs sm:text-sm text-slate-400 leading-snug line-clamp-2 mt-auto" style={BODY}>
                 {item.subtitle}
               </div>
             </div>

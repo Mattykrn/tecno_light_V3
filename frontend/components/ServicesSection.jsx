@@ -53,7 +53,7 @@ export default function ServicesSection() {
               <h3 className="text-white/90 text-xl font-bold uppercase tracking-wider mb-6 border-b border-white/10 pb-3" style={HEADING}>
                 Líneas de Fabricación y Productos
               </h3>
-              <p className="text-white/70 text-sm md:text-base leading-relaxed mb-8" style={BODY}>
+              <p className="text-sm sm:text-base text-slate-300 leading-relaxed mb-8" style={BODY}>
                 Fabricamos cartelería reglamentaria, preventiva, informativa y de obra conforme a pliegos de Dirección Nacional y Provincial de Vialidad. Producimos nomenclatura urbana, pórticos, ménsulas y cartelería corporativa de seguridad industrial. Desarrollamos señalización lumínica de alta tecnología como balizas destellantes a led, flechas lumínicas direccionales y tráilers solares. Asimismo, elaboramos y proveemos dispositivos delimitadores tales como vallas metálicas peatonales, tambores viales, canalizadores, conos y delineadores flexibles.
               </p>
               
@@ -78,7 +78,7 @@ export default function ServicesSection() {
               <h3 className="text-white/90 text-xl font-bold uppercase tracking-wider mb-6 border-b border-white/10 pb-3" style={HEADING}>
                 Servicios Viales
               </h3>
-              <p className="text-white/70 text-sm md:text-base leading-relaxed mb-8" style={BODY}>
+              <p className="text-sm sm:text-base text-slate-300 leading-relaxed mb-8" style={BODY}>
                 Ofrecemos provisión transitoria y alquiler de carteles, balizas, vallas y dispositivos para el desarrollo de desvíos en obras viales, civiles y eventos masivos. Realizamos demarcación vial e industrial aplicando pintura termoplástica y reflectiva para sendas peatonales, cordones, estacionamientos y sendas de seguridad en naves industriales. Además, contamos con personal capacitado para la instalación y montaje en obra de pórticos viales, defensas metálicas, reductores de velocidad, tachas reflectivas y delineadores, garantizando los más altos estándares de calidad y seguridad.
               </p>
               

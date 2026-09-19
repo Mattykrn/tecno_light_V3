@@ -130,12 +130,12 @@ export default function Home() {
                 desc: 'Aplicación de láminas retrorreflectivas Avery Dennison (grado ingeniería, alta intensidad y grado diamante).',
               }
             ].map(col => (
-              <div key={col.title} className="bg-slate-900/50 p-6 rounded-md border border-white/5 hover:border-primary/40 transition-colors flex flex-col items-start">
+              <div key={col.title} className="bg-slate-900/50 p-5 sm:p-6 rounded-md border border-white/5 hover:border-primary/40 transition-colors flex flex-col items-start">
                 <div className="w-8 h-8 rounded-sm bg-primary/10 border border-primary/20 flex items-center justify-center mb-4 shrink-0">
                   <div className="w-2 h-2 bg-primary" />
                 </div>
-                <h3 className="text-white font-bold uppercase tracking-wider text-sm mb-3" style={MONO}>{col.title}</h3>
-                <p className="text-white/60 text-sm leading-relaxed" style={BODY}>{col.desc}</p>
+                <h3 className="text-sm sm:text-base font-extrabold uppercase tracking-wider text-white mb-3" style={MONO}>{col.title}</h3>
+                <p className="text-xs sm:text-sm text-slate-300 leading-relaxed" style={BODY}>{col.desc}</p>
               </div>
             ))}
           </div>
@@ -202,8 +202,8 @@ export default function Home() {
               </a>
               <div className="flex flex-col h-full">
                 <div className="text-[10px] font-bold uppercase tracking-widest text-black/40 mb-1" style={MONO}>Sede Central</div>
-                <div className="text-black font-bold text-sm mb-2" style={BODY}>Santa Fe</div>
-                <a href="https://www.google.com/maps/search/?api=1&query=Suipacha+3243,+Santa+Fe,+Argentina" target="_blank" rel="noopener noreferrer" className="text-black/60 text-xs mb-3 hover:text-orange-500 cursor-pointer transition-colors block" style={BODY}>Suipacha 3243, Santa Fe Capital</a>
+                <div className="text-black font-bold text-sm sm:text-base mb-2" style={BODY}>Santa Fe</div>
+                <a href="https://www.google.com/maps/search/?api=1&query=Suipacha+3243,+Santa+Fe,+Argentina" target="_blank" rel="noopener noreferrer" className="text-black/70 text-xs sm:text-sm mb-3 hover:text-orange-500 cursor-pointer transition-colors block" style={BODY}>Suipacha 3243, Santa Fe Capital</a>
                 
                 <div className="mt-auto flex flex-col gap-2">
                   <a href="tel:03424553582" className="text-black font-semibold text-sm hover:text-primary transition-colors flex items-center gap-2" style={BODY}>
@@ -228,8 +228,8 @@ export default function Home() {
               </a>
               <div className="flex flex-col h-full">
                 <div className="text-[10px] font-bold uppercase tracking-widest text-black/40 mb-1" style={MONO}>Sede Comercial</div>
-                <div className="text-black font-bold text-sm mb-2" style={BODY}>Rosario</div>
-                <a href="https://www.google.com/maps/search/?api=1&query=Gutenberg+1122,+Rosario,+Santa+Fe,+Argentina" target="_blank" rel="noopener noreferrer" className="text-black/60 text-xs mb-3 hover:text-orange-500 cursor-pointer transition-colors block" style={BODY}>Gutenberg 1122, Rosario, Santa Fe</a>
+                <div className="text-black font-bold text-sm sm:text-base mb-2" style={BODY}>Rosario</div>
+                <a href="https://www.google.com/maps/search/?api=1&query=Gutenberg+1122,+Rosario,+Santa+Fe,+Argentina" target="_blank" rel="noopener noreferrer" className="text-black/70 text-xs sm:text-sm mb-3 hover:text-orange-500 cursor-pointer transition-colors block" style={BODY}>Gutenberg 1122, Rosario, Santa Fe</a>
                 
                 <div className="mt-auto flex flex-col gap-2">
                   <a href="tel:03414388444" className="text-black font-semibold text-sm hover:text-primary transition-colors flex items-center gap-2" style={BODY}>
@@ -254,8 +254,8 @@ export default function Home() {
               </a>
               <div className="flex flex-col h-full">
                 <div className="text-[10px] font-bold uppercase tracking-widest text-black/40 mb-1" style={MONO}>PLANTA FABRIL E INDUSTRIAL</div>
-                <div className="text-black font-bold text-sm mb-2" style={BODY}>Los Polígonos</div>
-                <a href="https://www.google.com/maps/search/?api=1&query=Parque+Industrial+Los+Poligonos,+Santa+Fe,+Argentina" target="_blank" rel="noopener noreferrer" className="text-black/60 text-xs mb-3 hover:text-orange-500 cursor-pointer transition-colors block" style={BODY}>Área Industrial Los Polígonos, Santa Fe</a>
+                <div className="text-black font-bold text-sm sm:text-base mb-2" style={BODY}>Los Polígonos</div>
+                <a href="https://www.google.com/maps/search/?api=1&query=Parque+Industrial+Los+Poligonos,+Santa+Fe,+Argentina" target="_blank" rel="noopener noreferrer" className="text-black/70 text-xs sm:text-sm mb-3 hover:text-orange-500 cursor-pointer transition-colors block" style={BODY}>Área Industrial Los Polígonos, Santa Fe</a>
                 
                 <div className="mt-auto flex flex-col gap-2">
                   <a href="tel:03424553582" className="text-black font-semibold text-sm hover:text-primary transition-colors flex items-center gap-2" style={BODY}>

@@ -49,7 +49,7 @@ export default function CatalogoSenales() {
             >
               FABRICACIÓN DE SEÑALIZACIÓN VIAL DE <span className="text-primary">PRIMER NIVEL</span>
             </h2>
-            <p className="text-white/80 text-sm lg:text-base leading-relaxed font-medium mb-4" style={BODY}>
+            <p className="text-sm sm:text-base text-slate-300 leading-relaxed font-medium mb-4" style={BODY}>
               Producción de cartelería vial, urbana e industrial con sustratos de alta durabilidad y láminas retrorreflectivas Avery Dennison homologadas.
             </p>
             <div className="flex flex-wrap gap-3 mt-4 mb-8 text-sm text-slate-300">

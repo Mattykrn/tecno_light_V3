@@ -63,7 +63,7 @@ export default function InstalacionMontaje() {
           <h2 className="text-white leading-none tracking-tight mb-6" style={{ ...HEADING, fontSize: 'clamp(1.8rem, 4vw, 3.2rem)' }}>
             INSTALACIÓN Y MONTAJE DE CARTELERÍA VIAL EN RUTA Y CIUDAD
           </h2>
-          <p className="text-white/70 text-sm lg:text-base leading-relaxed font-medium mx-auto max-w-3xl" style={BODY}>
+          <p className="text-sm sm:text-base text-slate-300 leading-relaxed font-medium mx-auto max-w-3xl" style={BODY}>
             Cuadrillas especializadas, equipamiento pesado y logística para la colocación de estructuras, pórticos y señalización vertical reglamentaria bajo normas DNV y provinciales.
           </p>
         </div>
@@ -86,10 +86,10 @@ export default function InstalacionMontaje() {
               </div>
               {/* Ficha Técnica Abajo */}
               <div className="p-6 md:p-8 flex flex-col flex-grow">
-                <h3 className="text-white font-bold text-lg md:text-xl leading-tight mb-3" style={HEADING}>
+                <h3 className="text-sm sm:text-base font-black tracking-wide text-white leading-snug mb-3" style={HEADING}>
                   {item.title}
                 </h3>
-                <p className="text-white/70 text-sm leading-relaxed" style={BODY}>
+                <p className="text-xs sm:text-sm text-slate-400 leading-relaxed" style={BODY}>
                   {item.desc}
                 </p>
               </div>

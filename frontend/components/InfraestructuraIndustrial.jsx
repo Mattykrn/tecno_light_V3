@@ -58,7 +58,7 @@ export default function InfraestructuraIndustrial() {
             <h2 className="text-white leading-none tracking-tight mb-6" style={{ ...HEADING, fontSize: 'clamp(1.8rem, 4vw, 3rem)' }}>
               TRABAJOS Y SOLUCIONES VIALES INSTALADAS
             </h2>
-            <p className="text-white/70 text-sm lg:text-base leading-relaxed font-medium" style={BODY}>
+            <p className="text-sm sm:text-base text-slate-300 leading-relaxed font-medium" style={BODY}>
               Registro visual de obras, cartelería reglamentaria, señalización transitoria y equipamiento.
             </p>
           </div>

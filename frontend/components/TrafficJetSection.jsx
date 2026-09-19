@@ -62,7 +62,7 @@ export default function TrafficJetSection() {
           <h2 className="text-3xl md:text-5xl font-black text-white leading-tight" style={HEADING}>
             Impresión Digital Retrorreflectiva: <span className="text-[#FF5A1F]">Avery Dennison TrafficJet™ Xpress</span>
           </h2>
-          <p className="text-slate-300 text-base md:text-lg leading-relaxed font-medium" style={BODY}>
+          <p className="text-sm sm:text-base text-slate-300 leading-relaxed font-medium" style={BODY}>
             Capacidad de impresión directa sobre láminas prismáticas bajo estrictas normas de Vialidad Nacional y Provincial, garantizando uniformidad cromática y retrorreflexión controlada.
           </p>
 
@@ -112,7 +112,7 @@ export default function TrafficJetSection() {
             </div>
 
             <div className="mt-3 bg-slate-800/80 backdrop-blur-sm border border-slate-700/70 px-4 py-3 rounded-xl shadow-lg text-center">
-              <p className="text-xs text-slate-300 font-medium" style={MONO}>
+              <p className="text-xs sm:text-sm text-slate-300 font-medium" style={MONO}>
                 Registro directo en planta — Proceso continuo de impresión digital sobre lámina reflectiva microprismática.
               </p>
             </div>
@@ -142,10 +142,10 @@ export default function TrafficJetSection() {
                 </span>
               </div>
               <div className="pt-4">
-                <p className="text-xs font-bold text-slate-700 uppercase tracking-wider mb-1" style={MONO}>
+                <p className="text-xs sm:text-sm font-bold text-slate-700 uppercase tracking-wider mb-1" style={MONO}>
                   Garantía de Retrorreflectividad Homologada (DNV / IRAM 3952)
                 </p>
-                <p className="text-slate-600 text-xs md:text-sm font-medium leading-relaxed" style={BODY}>
+                <p className="text-slate-600 text-xs sm:text-sm font-medium leading-relaxed" style={BODY}>
                   Impresión digital directa sobre láminas microprismáticas Grado Ingeniería y Grado Diamante con tintas eco-solventes homologadas y curado UV. Durabilidad exterior certificada por Avery Dennison de 10 a 12 años.
                 </p>
               </div>
@@ -180,11 +180,11 @@ export default function TrafficJetSection() {
                     <div className="w-8 h-8 rounded-lg bg-slate-800 border border-slate-700 flex items-center justify-center shrink-0">
                       {pillar.icon}
                     </div>
-                    <h3 className="text-white font-bold text-xs tracking-wide" style={MONO}>
+                    <h3 className="text-sm sm:text-base font-bold text-white tracking-wide" style={MONO}>
                       {pillar.title}
                     </h3>
                   </div>
-                  <p className="text-slate-300 text-xs leading-relaxed" style={BODY}>
+                  <p className="text-xs sm:text-sm text-slate-300 leading-normal" style={BODY}>
                     {pillar.desc}
                   </p>
                 </div>

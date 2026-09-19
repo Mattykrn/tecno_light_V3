@@ -109,12 +109,12 @@ function VideoCard({ video, index }) {
       {/* Content */}
       <div className="p-5">
         <h3
-          className="text-white text-sm font-bold mb-2 leading-tight"
+          className="text-sm sm:text-base font-bold text-white mb-2 leading-tight"
           style={HEADING}
         >
           {video.title}
         </h3>
-        <p className="text-white/50 text-xs leading-relaxed" style={BODY}>
+        <p className="text-xs sm:text-sm text-slate-300 leading-relaxed" style={BODY}>
           {video.desc}
         </p>
       </div>
