@@ -10,4 +10,5 @@ Disallow: /admin/dashboard
 Disallow: /api/
 
 # Sitemap
+Sitemap: https://tecno-light-v3-irux.vercel.app/sitemap.xml
 Sitemap: https://tecnolight.com.ar/sitemap.xml

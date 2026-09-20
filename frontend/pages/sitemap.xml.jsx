@@ -1,4 +1,4 @@
-const FRONTEND_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://tecnolight.com.ar';
+const FRONTEND_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://tecno-light-v3-irux.vercel.app';
 
 const PROJECT_SLUGS = [
   'senalizacion-urbana-santa-fe', 'autopista-rosario-cordoba', 'puerto-de-santa-fe',

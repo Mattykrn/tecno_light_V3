@@ -15,34 +15,46 @@ export default function Document() {
         <meta charSet="utf-8" />
         <meta
           name="description"
-          content="Tecno Light - Señalización Vial y Cartelería en Santa Fe, Argentina. Más de 30 años de experiencia fabricando seguridad vial premium: señales reglamentarias, preventivas, informativas y cartelería comercial."
+          content="Empresa líder en fabricación integral de señales viales, cartelería de gran porte, protección personal y tecnología de impresión Avery Dennison TrafficJet™ Xpress bajo normativas DNV y DPV."
         />
+        <meta name="robots" content="index, follow" />
         <meta
           name="keywords"
-          content="señalización vial Santa Fe, carteles Tecno Light, señales reglamentarias Argentina, cartelería comercial, seguridad vial, señales preventivas, Tecno Light Santa Fe"
+          content="señalización vial Santa Fe, carteles Tecno Light, señales reglamentarias Argentina, cartelería comercial, seguridad vial, señales preventivas, Tecno Light Santa Fe, TrafficJet Xpress, Avery Dennison"
         />
 
-        {/* Open Graph / Facebook */}
+        {/* Open Graph / WhatsApp / Facebook */}
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://tecnolight.com.ar/" />
-        <meta property="og:title" content="Tecno Light – Señalización Vial y Cartelería | Santa Fe" />
+        <meta property="og:site_name" content="Tecno Light S.R.L." />
+        <meta property="og:locale" content="es_AR" />
+        <meta property="og:url" content="https://tecno-light-v3-irux.vercel.app" />
+        <meta property="og:title" content="TECNO LIGHT S.R.L. | Señalización Vial e Industrial" />
         <meta
           property="og:description"
-          content="Más de 30 años de trayectoria en señalización vial y cartelería. Señales reglamentarias, preventivas e informativas de alta calidad para municipios y empresas."
+          content="Fabricación integral de señales viales reglamentarias, cartelería de obra y seguridad industrial. Tecnología TrafficJet™ Xpress con láminas microprismáticas homologadas."
         />
-        <meta property="og:image" content="https://tecnolight.com.ar/og-image.jpg" />
+        <meta property="og:image" content="https://tecno-light-v3-irux.vercel.app/images/og-share.jpg" />
+        <meta property="og:image:secure_url" content="https://tecno-light-v3-irux.vercel.app/images/og-share.jpg" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:image:alt" content="TECNO LIGHT S.R.L. - Señalización Vial" />
+        <meta property="og:image:type" content="image/jpeg" />
 
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Tecno Light – Señalización Vial | Santa Fe, Argentina" />
+        <meta name="twitter:title" content="TECNO LIGHT S.R.L. | Señalización Vial e Industrial" />
         <meta
           name="twitter:description"
-          content="Más de 30 años de trayectoria en señalización vial y cartelería de alta calidad."
+          content="Fabricación integral de señales viales reglamentarias, cartelería de obra y seguridad industrial. Tecnología TrafficJet™ Xpress con láminas microprismáticas homologadas."
         />
+        <meta name="twitter:image" content="https://tecno-light-v3-irux.vercel.app/images/og-share.jpg" />
+        <meta name="twitter:image:alt" content="TECNO LIGHT S.R.L. - Señalización Vial" />
 
-        {/* Favicon & PWA */}
+        {/* Favicon & PWA — Isotipo oficial de la flecha naranja */}
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
         <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="icon" type="image/png" sizes="192x192" href="/icon-192x192.png" />
+        <link rel="icon" type="image/png" sizes="512x512" href="/icon-512x512.png" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <link rel="manifest" href="/manifest.json" />
         <meta name="theme-color" content="#0b111e" />
@@ -90,7 +102,7 @@ export default function Document() {
               name: 'Tecno Light',
               description:
                 'Empresa líder en señalización vial y cartelería con más de 30 años de trayectoria en Santa Fe, Argentina.',
-              url: 'https://tecnolight.com.ar',
+              url: 'https://tecno-light-v3-irux.vercel.app',
               telephone: '+54-342-455-3582',
               email: 'ventas@tecnolight.com.ar',
               address: {

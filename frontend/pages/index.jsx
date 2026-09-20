@@ -34,8 +34,40 @@ export default function Home() {
   return (
     <div>
       <Head>
-        <title>TECNO LIGHT S.R.L. — Señalización Vial e Industrial | Santa Fe, Argentina</title>
-        <meta name="description" content="TECNO LIGHT S.R.L. — Empresa líder en fabricación integral de señales viales de Argentina. Señalización vial e industrial. Más de 30 años de trayectoria. Distribuidores certificados AVERY DENNISON." />
+        <title>TECNO LIGHT S.R.L. | Señalización Vial e Industrial</title>
+        <meta
+          name="description"
+          content="Empresa líder en fabricación integral de señales viales, cartelería de gran porte, protección personal y tecnología de impresión Avery Dennison TrafficJet™ Xpress bajo normativas DNV y DPV."
+        />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://tecno-light-v3-irux.vercel.app" />
+
+        {/* Open Graph / WhatsApp */}
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Tecno Light S.R.L." />
+        <meta property="og:locale" content="es_AR" />
+        <meta property="og:url" content="https://tecno-light-v3-irux.vercel.app" />
+        <meta property="og:title" content="TECNO LIGHT S.R.L. | Señalización Vial e Industrial" />
+        <meta
+          property="og:description"
+          content="Fabricación integral de señales viales reglamentarias, cartelería de obra y seguridad industrial. Tecnología TrafficJet™ Xpress con láminas microprismáticas homologadas."
+        />
+        <meta property="og:image" content="https://tecno-light-v3-irux.vercel.app/images/og-share.jpg" />
+        <meta property="og:image:secure_url" content="https://tecno-light-v3-irux.vercel.app/images/og-share.jpg" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:image:alt" content="TECNO LIGHT S.R.L. - Señalización Vial" />
+        <meta property="og:image:type" content="image/jpeg" />
+
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="TECNO LIGHT S.R.L. | Señalización Vial e Industrial" />
+        <meta
+          name="twitter:description"
+          content="Fabricación integral de señales viales reglamentarias, cartelería de obra y seguridad industrial. Tecnología TrafficJet™ Xpress con láminas microprismáticas homologadas."
+        />
+        <meta name="twitter:image" content="https://tecno-light-v3-irux.vercel.app/images/og-share.jpg" />
+        <meta name="twitter:image:alt" content="TECNO LIGHT S.R.L. - Señalización Vial" />
       </Head>
 
       {/* ══════════ HERO ══════════ */}
