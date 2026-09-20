@@ -16,24 +16,25 @@ export default function InteractiveRoadHero() {
 
       {/* Contenido Central */}
       <motion.div 
-        className="relative z-10 max-w-5xl mx-auto text-center space-y-6 flex flex-col items-center"
+        className="relative z-10 max-w-6xl mx-auto text-center space-y-6 flex flex-col items-center w-full"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
       >
 
-        {/* Logo institucional centrado sobre el H1 con presencia imponente */}
-        <div className="flex justify-center items-center mt-4 sm:mt-6 mb-8 sm:mb-10 w-full">
+        {/* Logo institucional con escala monumental y presencia protagónica */}
+        <div className="w-full flex justify-center items-center mt-4 sm:mt-6 mb-8 sm:mb-10 px-4">
           <img 
             src="/images/logo-tecnolight-white.png" 
             alt="TECNO LIGHT S.R.L." 
-            className="h-24 sm:h-32 md:h-40 lg:h-44 w-auto object-contain drop-shadow-[0_10px_25px_rgba(0,0,0,0.7)]"
+            className="w-full max-w-2xl sm:max-w-3xl md:max-w-4xl lg:max-w-5xl h-auto object-contain drop-shadow-[0_12px_32px_rgba(0,0,0,0.85)]"
+            style={{ width: '100%', maxWidth: '960px', height: 'auto' }}
           />
         </div>
 
-        {/* Título Principal H1 */}
+        {/* Título Principal H1 equilibrado */}
         <h1 
-          className="text-xl md:text-3xl lg:text-4xl font-bold leading-tight tracking-tight text-white uppercase mt-4"
+          className="text-xl sm:text-2xl md:text-3xl font-extrabold text-white tracking-wide text-center uppercase max-w-4xl mx-auto mt-4 leading-tight"
           style={{ fontFamily: "'Raleway', sans-serif" }}
         >
           EMPRESA LÍDER EN FABRICACIÓN INTEGRAL DE SEÑALES VIALES DE <span className="text-[#FF5A1F]">ARGENTINA</span>
