@@ -22,12 +22,12 @@ export default function InteractiveRoadHero() {
         transition={{ duration: 0.8, ease: "easeOut" }}
       >
 
-        {/* Logo institucional centrado sobre el H1 con respiro vertical */}
-        <div className="flex justify-center items-center mt-6 mb-6">
+        {/* Logo institucional centrado sobre el H1 con presencia imponente */}
+        <div className="flex justify-center items-center mt-4 sm:mt-6 mb-8 sm:mb-10 w-full">
           <img 
             src="/images/logo-tecnolight-white.png" 
             alt="TECNO LIGHT S.R.L." 
-            className="h-16 sm:h-20 md:h-24 w-auto object-contain drop-shadow-[0_4px_16px_rgba(0,0,0,0.6)]"
+            className="h-24 sm:h-32 md:h-40 lg:h-44 w-auto object-contain drop-shadow-[0_10px_25px_rgba(0,0,0,0.7)]"
           />
         </div>
 
