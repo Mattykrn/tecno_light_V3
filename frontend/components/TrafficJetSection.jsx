@@ -57,13 +57,13 @@ export default function TrafficJetSection() {
         {/* Header de la Sección */}
         <div className="text-center max-w-3xl mx-auto mb-14 space-y-4">
           <span className="inline-block px-3 py-1 rounded-full bg-orange-500/10 text-orange-400 border border-orange-500/20 text-xs font-bold tracking-wider uppercase" style={MONO}>
-            Equipamiento Industrial Homologado
+            Bloque B — Impresión Digital y Rotulación
           </span>
           <h2 className="text-3xl md:text-5xl font-black text-white leading-tight" style={HEADING}>
             Impresión Digital Retrorreflectiva: <span className="text-[#FF5A1F]">Avery Dennison TrafficJet™ Xpress</span>
           </h2>
           <p className="text-sm sm:text-base text-slate-300 leading-relaxed font-medium" style={BODY}>
-            Capacidad de impresión directa sobre láminas prismáticas bajo estrictas normas de Vialidad Nacional y Provincial, garantizando uniformidad cromática y retrorreflexión controlada.
+            Impresión digital directa sobre láminas retrorreflectivas microprismáticas (Grado Ingeniería, Alta Intensidad Prismática y Grado Diamante) con tintas eco-solventes de curado UV. Sobrelaminado protector Anti-Graffiti para remoción de aerosoles y pinturas sin pérdida de reflectividad. Rotulación gráfica de vehículos comerciales, transporte pesado y flotas corporativas.
           </p>
 
           {/* Badges de especificación técnica */}
@@ -111,11 +111,7 @@ export default function TrafficJetSection() {
               </div>
             </div>
 
-            <div className="mt-3 bg-slate-800/80 backdrop-blur-sm border border-slate-700/70 px-4 py-3 rounded-xl shadow-lg text-center">
-              <p className="text-xs sm:text-sm text-slate-300 font-medium" style={MONO}>
-                Registro directo en planta — Proceso continuo de impresión digital sobre lámina reflectiva microprismática.
-              </p>
-            </div>
+
           </div>
 
           {/* Columna Derecha: Tarjeta de Aval Oficial & 4 Pilares (6 cols) */}

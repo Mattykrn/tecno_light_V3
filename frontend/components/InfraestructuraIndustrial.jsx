@@ -1,144 +1,95 @@
-import React, { useState, useEffect } from 'react';
-import Image from 'next/image';
-import { X, ZoomIn } from 'lucide-react';
-import { AnimatePresence, motion } from 'framer-motion';
-import { getWaLink } from '../utils/whatsapp';
+import React from 'react';
 
 const MONO = { fontFamily: "'Roboto', sans-serif", fontWeight: 500 };
 const HEADING = { fontFamily: "'Raleway', sans-serif", fontWeight: 900, textTransform: 'uppercase' };
 const BODY = { fontFamily: "'Roboto', sans-serif" };
 
-const WA_LINK_VISITA = getWaLink('Hola, me interesa coordinar una visita técnica a la planta o solicitar una memoria descriptiva de sus procesos.');
+const PROCESO_STEPS = [
+  {
+    title: 'DISEÑO',
+    desc: 'Elaboración de planos técnicos y diagramación conforme a pliegos DNV / DPV y normativas IRAM vigentes.',
+  },
+  {
+    title: 'CORTE',
+    desc: 'Corte de chapas y perfiles metálicos mediante guillotina y pantógrafo industrial de alta precisión.',
+  },
+  {
+    title: 'SOLDADURA',
+    desc: 'Ensamble y soldadura estructural de marcos, refuerzos y pescantes para cartelería de gran porte.',
+  },
+  {
+    title: 'PINTURA',
+    desc: 'Tratamiento anticorrosivo y pintura horneada de alta durabilidad para exposición a la intemperie.',
+  },
+  {
+    title: 'ROTULADO',
+    desc: 'Aplicación de láminas retrorreflectivas Avery Dennison grado Ingeniería, HIP y Diamante mediante sistema TrafficJet™ Xpress.',
+  },
+];
 
-const PROYECTOS_Y_PLANTA = [
-  "/images/projects/santa-fe-gigante-1.jpg",
-  "/images/projects/santa-fe-3.jpg",
-  "/images/projects/parque-2.jpg",
-  "/images/catalogo_curado/infra-san-jeronimo.jpg",
-  "/images/catalogo_curado/infra-esperanza.jpg",
-  "/images/catalogo_curado/infra-omnibus-camioneta.jpg"
+const CAPACIDAD_ITEMS = [
+  'Planta fabril en Área Industrial Los Polígonos, Santa Fe',
+  'Maquinaria de corte, plegado y soldadura de chapa metálica',
+  'Sistema de impresión digital TrafficJet™ Xpress (Avery Dennison)',
+  'Flota propia para traslado y colocación en traza',
+  'Cuadrillas capacitadas para montaje en ruta y obra urbana',
+  'Depósito de equipamiento en alquiler para desvíos y eventos',
+  'Sedes comerciales en Santa Fe y Rosario',
+  'Cobertura operativa en Santa Fe, Córdoba, Entre Ríos y Buenos Aires',
 ];
 
 export default function InfraestructuraIndustrial() {
-  const [selectedImage, setSelectedImage] = useState(null);
-
-  useEffect(() => {
-    const handleKeyDown = (e) => {
-      if (e.key === 'Escape') setSelectedImage(null);
-    };
-
-    if (selectedImage) {
-      window.addEventListener('keydown', handleKeyDown);
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = '';
-    }
-
-    return () => {
-      window.removeEventListener('keydown', handleKeyDown);
-      document.body.style.overflow = '';
-    };
-  }, [selectedImage]);
-
   return (
-    <>
-      <section id="infraestructura" className="py-20 lg:py-28 bg-[#04060A] border-b border-white/5 relative z-10 scroll-mt-28">
-        <div id="obras" className="absolute top-0 scroll-mt-28" />
-        <div className="max-w-site mx-auto px-5 lg:px-10">
-          
-          {/* Header de la sección */}
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <div className="flex items-center justify-center gap-3 mb-4">
-              <div className="h-px w-8 bg-primary flex-shrink-0" />
-              <span className="text-primary text-[10px] tracking-[0.32em] uppercase font-bold" style={MONO}>
-                Infraestructura Industrial y Obras
-              </span>
-              <div className="h-px w-8 bg-primary flex-shrink-0" />
-            </div>
-            <h2 className="text-white leading-none tracking-tight mb-6" style={{ ...HEADING, fontSize: 'clamp(1.8rem, 4vw, 3rem)' }}>
-              TRABAJOS Y SOLUCIONES VIALES INSTALADAS
-            </h2>
-            <p className="text-sm sm:text-base text-slate-300 leading-relaxed font-medium" style={BODY}>
-              Registro visual de obras, cartelería reglamentaria, señalización transitoria y equipamiento.
-            </p>
-          </div>
+    <section id="infraestructura" className="py-20 lg:py-28 bg-[#04060A] border-b border-white/5 relative z-10 scroll-mt-28">
+      <div id="obras" className="absolute top-0 scroll-mt-28" />
+      <div className="max-w-site mx-auto px-5 lg:px-10">
 
-          {/* Galería de Imágenes Limpia con indicador de zoom */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
-            {PROYECTOS_Y_PLANTA.map((src, index) => (
-              <div 
-                key={index} 
-                className="group relative cursor-zoom-in overflow-hidden rounded-xl border border-slate-700/60 hover:border-orange-500/60 transition-all duration-300 bg-slate-900 shadow-lg aspect-[4/3]"
-                onClick={() => setSelectedImage(src)}
-              >
-                <Image 
-                  src={src} 
-                  alt="Trabajo realizado - Tecno Light S.R.L."
-                  fill
-                  sizes="(max-width: 768px) 100vw, 33vw"
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                />
-                {/* Overlay hover sutil con ícono de lupa centrado */}
-                <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-200 bg-black/30 absolute inset-0 flex items-center justify-center pointer-events-none">
-                  <div className="w-10 h-10 rounded-full bg-black/60 backdrop-blur-sm border border-white/20 flex items-center justify-center text-white shadow-lg">
-                    <ZoomIn size={20} />
-                  </div>
-                </div>
+        {/* Header */}
+        <div className="text-center max-w-3xl mx-auto mb-16">
+          <div className="flex items-center justify-center gap-3 mb-4">
+            <div className="h-px w-8 bg-primary flex-shrink-0" />
+            <span className="text-primary text-[10px] tracking-[0.32em] uppercase font-bold" style={MONO}>
+              Capacidad Operativa e Infraestructura
+            </span>
+            <div className="h-px w-8 bg-primary flex-shrink-0" />
+          </div>
+          <h2 className="text-white leading-none tracking-tight mb-6" style={{ ...HEADING, fontSize: 'clamp(1.8rem, 4vw, 3rem)' }}>
+            PROCESO INDUSTRIAL DE FABRICACIÓN
+          </h2>
+          <p className="text-sm sm:text-base text-slate-300 leading-relaxed font-medium" style={BODY}>
+            Fabricación integral desde diseño hasta rotulado final. Proceso continuo en planta propia con equipamiento especializado y control de calidad en cada etapa.
+          </p>
+        </div>
+
+        {/* Proceso de 5 etapas */}
+        <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-6 mb-16">
+          {PROCESO_STEPS.map(col => (
+            <div key={col.title} className="bg-slate-900/50 p-5 sm:p-6 rounded-md border border-white/5 hover:border-primary/40 transition-colors flex flex-col items-start">
+              <div className="w-8 h-8 rounded-sm bg-primary/10 border border-primary/20 flex items-center justify-center mb-4 shrink-0">
+                <div className="w-2 h-2 bg-primary" />
+              </div>
+              <h3 className="text-sm sm:text-base font-extrabold uppercase tracking-wider text-white mb-3" style={MONO}>{col.title}</h3>
+              <p className="text-xs sm:text-sm text-slate-300 leading-relaxed" style={BODY}>{col.desc}</p>
+            </div>
+          ))}
+        </div>
+
+        {/* Capacidad instalada */}
+        <div className="bg-slate-900/40 border border-slate-700/50 rounded-xl p-8">
+          <h3 className="text-white text-sm font-extrabold uppercase tracking-wider mb-6 pb-3 border-b border-white/10" style={HEADING}>
+            Capacidad Instalada y Recursos Operativos
+          </h3>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            {CAPACIDAD_ITEMS.map((item, i) => (
+              <div key={i} className="flex items-start gap-3">
+                <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-primary shrink-0" />
+                <span className="text-slate-300 text-xs sm:text-sm leading-relaxed" style={BODY}>{item}</span>
               </div>
             ))}
           </div>
-
-          {/* CTA Secundario */}
-          <div className="text-center mt-12">
-            <a
-              href={WA_LINK_VISITA}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2.5 bg-slate-800 hover:bg-slate-700 text-white font-bold px-7 py-4 rounded-xl border border-slate-700 hover:border-slate-500 text-sm transition-all duration-300"
-              style={BODY}
-            >
-              Coordinar visita técnica a planta o solicitar memoria descriptiva
-            </a>
-          </div>
-
         </div>
-      </section>
 
-      {/* Lightbox / Modal */}
-      <AnimatePresence>
-        {selectedImage && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="bg-black/90 backdrop-blur-md z-50 fixed inset-0 flex items-center justify-center p-4"
-            onClick={() => setSelectedImage(null)}
-          >
-            <button
-              type="button"
-              className="fixed top-4 right-4 z-[60] flex items-center justify-center w-11 h-11 min-w-[44px] min-h-[44px] rounded-full bg-slate-900/90 hover:bg-orange-600 text-white border border-white/20 transition-all shadow-xl active:scale-95 cursor-pointer"
-              onClick={() => setSelectedImage(null)}
-              aria-label="Cerrar imagen"
-            >
-              <X size={24} className="text-white" />
-            </button>
-            <motion.div
-              initial={{ scale: 0.95, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              exit={{ scale: 0.95, opacity: 0 }}
-              transition={{ type: "spring", damping: 25, stiffness: 300 }}
-              className="relative w-full max-w-5xl max-h-[85vh] h-full flex items-center justify-center"
-              onClick={(e) => e.stopPropagation()}
-            >
-              <img
-                src={selectedImage}
-                alt="Vista previa ampliada"
-                className="max-w-full max-h-full object-contain rounded-xl shadow-2xl"
-              />
-            </motion.div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </>
+      </div>
+    </section>
   );
 }

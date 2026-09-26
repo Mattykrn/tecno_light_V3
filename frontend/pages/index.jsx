@@ -10,7 +10,6 @@ import TrafficJetSection from '../components/TrafficJetSection';
 import ErrorBoundary from '../components/ErrorBoundary';
 import CatalogoSenales from '../components/CatalogoSenales';
 import ServicesSection from '../components/ServicesSection';
-import InstalacionMontaje from '../components/InstalacionMontaje';
 
 
 
@@ -37,7 +36,7 @@ export default function Home() {
         <title>TECNO LIGHT S.R.L. | Señalización Vial e Industrial</title>
         <meta
           name="description"
-          content="Empresa líder en fabricación integral de señales viales, cartelería de gran porte, protección personal y tecnología de impresión Avery Dennison TrafficJet™ Xpress bajo normativas DNV y DPV."
+          content="Fabricación y provisión integral de señalización vial, indumentaria de trabajo, EPP y alquiler de equipamiento para obra bajo normativas DNV, DPV y estándares IRAM. Sede en Santa Fe y Rosario."
         />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://tecno-light-v3-irux.vercel.app" />
@@ -74,22 +73,23 @@ export default function Home() {
       <InteractiveRoadHero />
 
 
-      {/* ══════════ CLIENTES CORPORATIVOS (Transición técnica a sección clara) ══════════ */}
+      {/* ══════════ CLIENTES Y REFERENCIAS COMERCIALES ══════════ */}
       <section className="py-12 bg-slate-100 bg-hex-pattern border-t border-slate-200 shadow-sm border-b border-black/5">
         <div className="max-w-site mx-auto px-5 lg:px-10 text-center">
           <div className="flex items-center justify-center gap-3 mb-6">
             <div className="h-px w-8 bg-slate-300 flex-shrink-0" />
             <span className="text-slate-500 text-[10px] tracking-[0.32em] uppercase font-bold" style={MONO}>
-              Empresas y Organismos que confían en nosotros
+              Clientes, organismos y distribuidores
             </span>
             <div className="h-px w-8 bg-slate-300 flex-shrink-0" />
           </div>
-          <div className="flex flex-wrap justify-center items-center gap-x-12 gap-y-6 opacity-60 grayscale hover:grayscale-0 transition-all duration-500">
-            {/* Logos/Textos simulados en texto de alto contraste B2B */}
-            <span className="text-slate-900 font-extrabold text-xl tracking-tighter uppercase" style={HEADING}>Grupo Ombú</span>
+          <div className="flex flex-wrap justify-center items-center gap-x-10 gap-y-6 opacity-60 grayscale hover:grayscale-0 transition-all duration-500">
             <span className="text-slate-900 font-extrabold text-xl tracking-tighter uppercase" style={HEADING}>Vialidad Nacional</span>
             <span className="text-slate-900 font-extrabold text-xl tracking-tighter uppercase" style={HEADING}>DPV Santa Fe</span>
+            <span className="text-slate-900 font-extrabold text-xl tracking-tighter uppercase" style={HEADING}>Rosi Distribuciones</span>
+            <span className="text-slate-900 font-extrabold text-xl tracking-tighter uppercase" style={HEADING}>Parpal</span>
             <span className="text-slate-900 font-extrabold text-xl tracking-tighter uppercase" style={HEADING}>Municipios y Comunas</span>
+            <span className="text-slate-900 font-extrabold text-xl tracking-tighter uppercase" style={HEADING}>ASSA</span>
             <span className="text-slate-900 font-extrabold text-xl tracking-tighter uppercase" style={HEADING}>Constructoras Viales</span>
           </div>
         </div>
@@ -104,10 +104,13 @@ export default function Home() {
           </h2>
           <div className="space-y-5 text-base md:text-lg text-slate-700 font-medium leading-relaxed" style={BODY}>
             <p>
-              TECNO LIGHT S.R.L. es una empresa de reconocida trayectoria en la fabricación de señalización vial e industrial, y en la comercialización de una amplia gama de productos de protección personal y seguridad industrial.
+              TECNO LIGHT S.R.L. fabrica y provee señalización vial reglamentaria, preventiva, informativa y transitoria conforme a pliegos DNV y DPV. Opera planta propia en el Área Industrial Los Polígonos (Santa Fe) con equipamiento de corte, soldadura, pintura y el sistema de impresión digital TrafficJet™ Xpress de Avery Dennison.
             </p>
             <p>
-              Brindamos asesoramiento especializado a empresas constructoras, organismos viales y municipios, ofreciendo soluciones integrales adaptadas a cada necesidad y garantizando productos que cumplen con los más altos estándares de calidad y normativas vigentes.
+              Comercializa equipos de protección personal (EPP) e indumentaria de trabajo para obras civiles, viales e industriales, y provee alquiler de equipamiento de seguridad vial para desvíos y eventos. Distribuye y trabaja en vinculación con <strong>Rosi Distribuciones</strong>, <strong>Parpal</strong>, municipios, comunas y empresas contratistas de obra pública y privada en las provincias de Santa Fe, Córdoba, Entre Ríos y Buenos Aires.
+            </p>
+            <p>
+              Atención comercial de lunes a viernes de 8:00 a 17:00 hs. Sedes en Santa Fe Capital y Rosario. Entrega directa en obrador o centro logístico asignado.
             </p>
           </div>
         </div>
@@ -116,63 +119,10 @@ export default function Home() {
       {/* ══════════ TECNOLOGÍA TRAFFICJET ══════════ */}
       <TrafficJetSection />
 
-      {/* ══════════ INFRAESTRUCTURA Y MEDIA GRID ══════════ */}
+      {/* ══════════ INFRAESTRUCTURA E INDUSTRIAL ══════════ */}
       <ErrorBoundary>
         <InfraestructuraIndustrial />
       </ErrorBoundary>
-
-      {/* ══════════ PROCESO INDUSTRIAL DE FABRICACIÓN ══════════ */}
-      <section id="planta" className="py-20 lg:py-28 bg-[#0d0f14] relative overflow-hidden border-b border-white/5 scroll-mt-28">
-        <div id="planta-industrial" className="absolute top-0 scroll-mt-28" />
-        <div className="max-w-site mx-auto px-5 lg:px-10 relative z-10">
-          
-          <div className="text-center max-w-4xl mx-auto mb-16">
-            <div className="flex items-center justify-center gap-3 mb-4">
-              <div className="h-px w-8 bg-primary flex-shrink-0" />
-              <span className="text-primary text-[10px] tracking-[0.32em] uppercase font-bold" style={MONO}>
-                Capacidad Operativa e Infraestructura
-              </span>
-              <div className="h-px w-8 bg-primary flex-shrink-0" />
-            </div>
-            <h2 className="text-white leading-none tracking-tight mb-6" style={{ ...HEADING, fontSize: 'clamp(2rem, 4vw, 3.2rem)' }}>
-              PROCESO INDUSTRIAL DE FABRICACIÓN
-            </h2>
-          </div>
-
-          <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-6">
-            {[
-              {
-                title: 'DISEÑO',
-                desc: 'Elaboración de planos técnicos y diagramación bajo normativas vigentes (DNV / DPV).',
-              },
-              {
-                title: 'CORTE',
-                desc: 'Corte de chapas y perfiles metálicos mediante guillotina y pantógrafo industrial.',
-              },
-              {
-                title: 'SOLDADURA',
-                desc: 'Ensamble y soldadura estructural de marcos, refuerzos y pescantes para cartelería pesada.',
-              },
-              {
-                title: 'PINTURA',
-                desc: 'Tratamiento anticorrosivo y pintura horneada de alta durabilidad para intemperie.',
-              },
-              {
-                title: 'ROTULADO',
-                desc: 'Aplicación de láminas retrorreflectivas Avery Dennison (grado ingeniería, alta intensidad y grado diamante).',
-              }
-            ].map(col => (
-              <div key={col.title} className="bg-slate-900/50 p-5 sm:p-6 rounded-md border border-white/5 hover:border-primary/40 transition-colors flex flex-col items-start">
-                <div className="w-8 h-8 rounded-sm bg-primary/10 border border-primary/20 flex items-center justify-center mb-4 shrink-0">
-                  <div className="w-2 h-2 bg-primary" />
-                </div>
-                <h3 className="text-sm sm:text-base font-extrabold uppercase tracking-wider text-white mb-3" style={MONO}>{col.title}</h3>
-                <p className="text-xs sm:text-sm text-slate-300 leading-relaxed" style={BODY}>{col.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* ══════════ LÍNEAS DE FABRICACIÓN Y SERVICIOS VIALES ══════════ */}
       <ErrorBoundary>
@@ -184,10 +134,7 @@ export default function Home() {
         <ServicesSection />
       </ErrorBoundary>
 
-      {/* ══════════ INSTALACIÓN Y MONTAJE ══════════ */}
-      <ErrorBoundary>
-        <InstalacionMontaje />
-      </ErrorBoundary>
+      {/* ══════════ INSTALACIÓN Y MONTAJE (integrado en ServicesSection) ══════════ */}
 
 
       {/* ══════════ SEGURIDAD INDUSTRIAL Y EPP ══════════ */}

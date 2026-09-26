@@ -4,8 +4,8 @@ import { motion } from 'framer-motion';
 import { FileText, MessageCircle } from 'lucide-react';
 import { getWaLink } from '../utils/whatsapp';
 
-const WA_LINK = getWaLink('Hola, necesito solicitar una cotización de pliego de señalización vial.');
-const WA_LINK_INGENIERIA = getWaLink('Hola, me contacto con el departamento de Ingeniería/Ventas para consultas sobre obras y licitaciones.');
+const WA_LINK = getWaLink();
+const WA_LINK_CONTACTO = getWaLink();
 
 export default function InteractiveRoadHero() {
   return (
@@ -32,17 +32,17 @@ export default function InteractiveRoadHero() {
           />
         </div>
 
-        {/* Título Principal H1 equilibrado */}
+        {/* Título Principal H1 */}
         <h1 
           className="text-xl sm:text-2xl md:text-3xl font-extrabold text-white tracking-wide text-center uppercase max-w-4xl mx-auto mt-4 leading-tight"
           style={{ fontFamily: "'Raleway', sans-serif" }}
         >
-          EMPRESA LÍDER EN FABRICACIÓN INTEGRAL DE SEÑALES VIALES DE <span className="text-[#FF5A1F]">ARGENTINA</span>
+          TECNO LIGHT <span className="text-[#FF5A1F]">S.R.L.</span>
         </h1>
 
-        {/* Bajada Técnica */}
-        <p className="text-slate-300 text-base md:text-xl max-w-3xl mx-auto font-medium leading-relaxed" style={{ fontFamily: "'Roboto', sans-serif" }}>
-          TECNO LIGHT S.R.L. — Señalización vial e industrial, protección personal y seguridad industrial bajo normativas DNV y DPV.
+        {/* Bajada Técnica Directa */}
+        <p className="text-slate-300 text-base md:text-lg max-w-3xl mx-auto font-medium leading-relaxed" style={{ fontFamily: "'Roboto', sans-serif" }}>
+          Fabricación y provisión integral de señalización vial, indumentaria de trabajo, elementos de protección personal (EPP) y alquiler de equipamiento para obra bajo normativas DNV, DPV y estándares IRAM.
         </p>
 
         {/* Botones CTA */}
@@ -52,10 +52,10 @@ export default function InteractiveRoadHero() {
             className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 bg-[#FF5A1F] hover:bg-[#e54e18] text-white font-bold px-8 py-4 rounded-xl text-sm transition-all duration-300 hover:-translate-y-1 shadow-lg shadow-[#FF5A1F]/30"
           >
             <FileText size={18} />
-            Solicitar Cotización
+            Solicitar Presupuesto
           </a>
           <a
-            href={WA_LINK_INGENIERIA}
+            href={WA_LINK_CONTACTO}
             target="_blank"
             rel="noopener noreferrer"
             className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 bg-slate-800 hover:bg-slate-700 text-white font-semibold px-8 py-4 rounded-xl border border-slate-700 hover:border-slate-500 text-sm transition-all duration-300 hover:-translate-y-1"
